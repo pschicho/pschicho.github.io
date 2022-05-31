@@ -618,6 +618,10 @@ progress {
   height: auto;
 }
 
+.img-container {
+  text-align: center;
+}
+
 .figure {
   display: inline-block;
 }
