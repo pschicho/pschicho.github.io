@@ -12124,9 +12124,44 @@ ul.ul-edu li .description p.institution {
     color:rgba(0, 0, 0, .6)
 }
 
+
+.diags-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        url("../assets/img/all_diags.svg");
+    background-size:150%;
+/*    background-repeat: no-repeat;*/
+/*    background-position:100%;*/
+
+
+}
+
+.dark .diags-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        url("../assets/img/all_diags.svg");
+    background-size:150%;
+/*    background-position:100%;*/
+    filter:invert(1);
+}
+
+.avatar-wrapper-parent {
+    position: relative;
+    height:100%;
+    width:100%;
+}
+
 .avatar-wrapper {
     position: relative;
-    width: 200px;
+    width: cover;
     height: 210px;
     margin: 0 auto;
     object-fit: cover;
