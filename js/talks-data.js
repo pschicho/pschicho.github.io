@@ -1,5 +1,61 @@
 window.TALKS = [
   {
+    "title": "Probing early universe phase transition microphysics with gravitational waves",
+    "description": "",
+    "date": "2026-08-31",
+    "location": "invited plenary talk at PPC 2026, Sydney, Australia",
+    "talkUrl": "https://indico.global/event/15267/",
+    "category": "Conference"
+  },
+  {
+    "title": "Probing early universe phase transition microphysics with gravitational waves",
+    "description": "",
+    "date": "2026-06-08",
+    "location": "invited plenary talk at ATHEXIS 2026, Athens, Greece",
+    "talkUrl": "https://physics.ntua.gr/Athexis/ATHEXIS2026.html",
+    "category": "Conference"
+  },
+  {
+    "title": "Uncertainty budgets for bubble wall velocities in cosmological phase transitions",
+    "description": "",
+    "date": "2026-05-18",
+    "location": "contributed talk at PLANCK, CERN, Switzerland",
+    "talkUrl": "https://indico.cern.ch/event/1552644/overview",
+    "category": "Contributed"
+  },
+  {
+    "title": "Finite-temperature bubble nucleation with shifting scale hierarchies",
+    "description": "",
+    "date": "2026-05-14",
+    "location": "invited seminar talk at University of Bologna, Italy",
+    "talkUrl": "",
+    "category": "Seminar"
+  },
+  {
+    "title": "Finite-temperature bubble nucleation with shifting scale hierarchies",
+    "description": "",
+    "date": "2026-05-11",
+    "location": "invited seminar talk at Roma Tor Vergata, Italy",
+    "talkUrl": "",
+    "category": "Seminar"
+  },
+  {
+    "title": "From microphysics to Gravitational Waves for cosmological phase transitions",
+    "description": "",
+    "date": "2026-04-17",
+    "location": "invited plenary talk at the 4th Topics of Particle, Astro and Cosmo Frontiers (TOPAC 2026) conference, Chengdu, China",
+    "talkUrl": "https://indico-tdli.sjtu.edu.cn/event/4560/",
+    "category": "Conference"
+  },
+  {
+    "title": "Microscopic descriptions of cosmological first-order phase transitions",
+    "description": "",
+    "date": "2026-04-09",
+    "location": "invited seminar talk at University of Stavanger, Norway",
+    "talkUrl": "",
+    "category": "Seminar"
+  },
+  {
     "title": "From microphysics to Gravitational Waves for cosmological phase transitions",
     "description": "",
     "date": "2026-04-07",

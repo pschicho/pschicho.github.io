@@ -132,7 +132,7 @@
       })
       .sort(byDateDesc);
 
-    var previewTalks = futureTalks.slice(0, 2).concat(pastTalks.slice(0, 1));
+    var previewTalks = futureTalks.slice(0, 2).sort(byDateDesc).concat(pastTalks.slice(0, 1));
 
     // Fallback: if one side is missing, fill from remaining talks closest to now.
     if (previewTalks.length < 3) {
