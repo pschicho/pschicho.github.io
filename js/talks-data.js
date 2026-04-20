@@ -45,6 +45,7 @@ window.TALKS = [
     "date": "2026-04-17",
     "location": "invited plenary talk at the 4th Topics of Particle, Astro and Cosmo Frontiers (TOPAC 2026) conference, Chengdu, China",
     "talkUrl": "https://indico-tdli.sjtu.edu.cn/event/4560/",
+    "slidesUrl": "/assets/talks/topac26.pdf",
     "category": "Conference"
   },
   {

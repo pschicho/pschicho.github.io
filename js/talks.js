@@ -1,4 +1,23 @@
 (function () {
+  function getSiteRootUrl() {
+    var currentScript = document.currentScript;
+    var scriptSrc = currentScript && currentScript.src ? currentScript.src : "";
+
+    if (!scriptSrc) {
+      var scripts = document.getElementsByTagName("script");
+      for (var index = scripts.length - 1; index >= 0; index -= 1) {
+        if (scripts[index].src && /\/js\/talks\.js(?:\?.*)?$/.test(scripts[index].src)) {
+          scriptSrc = scripts[index].src;
+          break;
+        }
+      }
+    }
+
+    return scriptSrc ? scriptSrc.replace(/\/js\/talks\.js(?:\?.*)?$/, "/") : "";
+  }
+
+  var siteRootUrl = getSiteRootUrl();
+
   function parseTalkDate(talk) {
     return new Date(talk.date + "T00:00:00");
   }
@@ -38,6 +57,18 @@
       .replace(/'/g, "&#39;");
   }
 
+  function resolveTalkUrl(url) {
+    if (!url) {
+      return url;
+    }
+
+    if (window.location.protocol === "file:" && url.charAt(0) === "/" && siteRootUrl) {
+      return siteRootUrl + url.slice(1);
+    }
+
+    return url;
+  }
+
   function renderTalkCard(talk) {
     var descriptionHtml = talk.description
       ? '<div class="article-style">' + escapeHtml(talk.description) + "</div>"
@@ -47,21 +78,21 @@
     if (talk.pdfUrl) {
       buttons.push(
         '<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="' +
-          escapeHtml(talk.pdfUrl) +
+          escapeHtml(resolveTalkUrl(talk.pdfUrl)) +
           '" target="_blank" rel="noopener">PDF</a>'
       );
     }
     if (talk.slidesUrl) {
       buttons.push(
         '<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="' +
-          escapeHtml(talk.slidesUrl) +
+          escapeHtml(resolveTalkUrl(talk.slidesUrl)) +
           '" target="_blank" rel="noopener">Slides</a>'
       );
     }
     if (talk.videoUrl) {
       buttons.push(
         '<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="' +
-          escapeHtml(talk.videoUrl) +
+          escapeHtml(resolveTalkUrl(talk.videoUrl)) +
           '" target="_blank" rel="noopener">Video</a>'
       );
     }
@@ -70,7 +101,7 @@
     if (talk.talkUrl) {
       titleHtml =
         '<a href="' +
-        escapeHtml(talk.talkUrl) +
+        escapeHtml(resolveTalkUrl(talk.talkUrl)) +
         '" itemprop="url" target="_blank" rel="noopener">' +
         escapeHtml(talk.title) +
         '</a>';
