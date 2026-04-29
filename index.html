@@ -678,79 +678,98 @@
             <h1>Selected publications</h1>
           </div>
           <div class="col-12 col-lg-8">
-            <ul class="fa-ul mb-0">
-              <li>
-                  <span class="fa-li">
-                    <i class="fas fa-book-open text-warning">
-                    </i>
-                  </span>
-                  J. Löfgren, M. J. Ramsey-Musolf, P. Schicho, and T. V. I. Tenkanen,
-                  Nucleation at Finite Temperature: A Gauge-Invariant Perturbative Framework,
-                  <a href="https://dx.doi.org/10.1103/PhysRevLett.130.251801" target="_blank" rel="noopener">
-                    Phys. Rev. Lett. 130, 251801</a>
-                  (2023),
-                  <a href="https://arxiv.org/abs/2112.05472"> [2112.05472]</a>.
-              </li>              
-              <li>
-                  <span class="fa-li">
-                    <i class="fas fa-book-open text-warning">
-                    </i>
-                  </span>
-                  A. Ekstedt, P. Schicho, and T. V. I. Tenkanen,
-                  DRalgo: A package for effective field theory approach for thermal phase transitions,
-                  <a href="https://dx.doi.org/10.1016/j.cpc.2023.108725" target="_blank" rel="noopener">
-                    Comput. Phys. Commun. 288, 108725</a>
-                  (2023),
-                  <a href="https://arxiv.org/abs/2205.08815"> [2205.08815]</a>.
-              </li>
-<!--               <li>
-                  <span class="fa-li">
-                    <i class="fas fa-book-open text-warning">
-                    </i>
-                  </span>
-                  J. Hirvonen, J. Löfgren, M. J. Ramsey-Musolf, P. Schicho, and T. V. I. Tenkanen,
-                  Computing the gauge-invariant bubble nucleation rate in finite temperature effective field theory,
-                  <a href="https://dx.doi.org/10.1007/JHEP07(2022)135"> JHEP 2022, 135</a>
-                  (2022),
-                  <a href="https://arxiv.org/abs/2112.08912"> [2112.08912]</a>.
-              </li> -->
-              <li>
-                  <span class="fa-li">
-                    <i class="fas fa-book-open text-warning">
-                    </i>
-                  </span>
-                  A. Ekstedt, P. Schicho, and T. V. I. Tenkanen,
-                  Cosmological phase transitions at three loops: The final verdict on perturbation theory,
-                  <a href="https://dx.doi.org/10.1103/PhysRevD.110.096006" target="_blank" rel="noopener">
-                    Phys. Rev. D 110, 096006</a>
-                  (2024),
-                  <a href="https://arxiv.org/abs/2405.18349"> [2405.18349]</a>.
-              </li>
-              <!-- <li>
-                  <span class="fa-li">
-                    <i class="fas fa-book-open text-warning">
-                    </i>
-                  </span>
-                  L. Niemi, P. Schicho, and T. V. I. Tenkanen,
-                  Singlet-assisted electroweak phase transition at two loops,
-                  <a href="https://dx.doi.org/10.1103/PhysRevD.103.115035" target="_blank" rel="noopener">
-                    Phys. Rev. D 103, 115035</a>
-                  (2021),
-                  <a href="https://arxiv.org/abs/2103.07467"> [2103.07467]</a>.
-              </li> -->
-              <li>
-                  <span class="fa-li">
-                    <i class="fas fa-book-open text-warning">
-                    </i>
-                  </span>
-                  D. Croon, O. Gould, P. Schicho, T. V. I. Tenkanen, and G. White,
-                  Theoretical uncertainties for cosmological first-order phase transitions,
-                  <a href="https://dx.doi.org/10.1007/JHEP04(2021)055" target="_blank" rel="noopener">
-                    JHEP 2021, 55</a>
-                  (2021),
-                  <a href="https://arxiv.org/abs/2009.10080"> [2009.10080]</a>.
-              </li>    
-            </ul>        
+            <div class="publication-stack">
+              <div class="publication-panel publication-panel-live">
+                <div class="publication-panel-header">
+                  <div>
+                    <h2 class="publication-subheading">Top 5 most cited on INSPIRE</h2>
+                  </div>
+                </div>
+                <div id="inspire-publications-status" class="publication-status">Loading publications from INSPIRE...</div>
+                <ol id="inspire-publications-list" class="publication-live-list" hidden></ol>
+              </div>
+
+              <div class="publication-panel publication-panel-static">
+                <div class="publication-panel-header publication-panel-header-static">
+                  <div>
+                    <h2 class="publication-subheading">Current hand-picked selection</h2>
+                  </div>
+                </div>
+                <ul class="fa-ul mb-0 publication-static-list">
+                  <li>
+                      <span class="fa-li">
+                        <i class="fas fa-book-open text-warning">
+                        </i>
+                      </span>
+                      J. Löfgren, M. J. Ramsey-Musolf, P. Schicho, and T. V. I. Tenkanen,
+                      Nucleation at Finite Temperature: A Gauge-Invariant Perturbative Framework,
+                      <a href="https://dx.doi.org/10.1103/PhysRevLett.130.251801" target="_blank" rel="noopener">
+                        Phys. Rev. Lett. 130, 251801</a>
+                      (2023),
+                      <a href="https://arxiv.org/abs/2112.05472"> [2112.05472]</a>.
+                  </li>
+                  <li>
+                      <span class="fa-li">
+                        <i class="fas fa-book-open text-warning">
+                        </i>
+                      </span>
+                      A. Ekstedt, P. Schicho, and T. V. I. Tenkanen,
+                      DRalgo: A package for effective field theory approach for thermal phase transitions,
+                      <a href="https://dx.doi.org/10.1016/j.cpc.2023.108725" target="_blank" rel="noopener">
+                        Comput. Phys. Commun. 288, 108725</a>
+                      (2023),
+                      <a href="https://arxiv.org/abs/2205.08815"> [2205.08815]</a>.
+                  </li>
+    <!--               <li>
+                      <span class="fa-li">
+                        <i class="fas fa-book-open text-warning">
+                        </i>
+                      </span>
+                      J. Hirvonen, J. Löfgren, M. J. Ramsey-Musolf, P. Schicho, and T. V. I. Tenkanen,
+                      Computing the gauge-invariant bubble nucleation rate in finite temperature effective field theory,
+                      <a href="https://dx.doi.org/10.1007/JHEP07(2022)135"> JHEP 2022, 135</a>
+                      (2022),
+                      <a href="https://arxiv.org/abs/2112.08912"> [2112.08912]</a>.
+                  </li> -->
+                  <li>
+                      <span class="fa-li">
+                        <i class="fas fa-book-open text-warning">
+                        </i>
+                      </span>
+                      A. Ekstedt, P. Schicho, and T. V. I. Tenkanen,
+                      Cosmological phase transitions at three loops: The final verdict on perturbation theory,
+                      <a href="https://dx.doi.org/10.1103/PhysRevD.110.096006" target="_blank" rel="noopener">
+                        Phys. Rev. D 110, 096006</a>
+                      (2024),
+                      <a href="https://arxiv.org/abs/2405.18349"> [2405.18349]</a>.
+                  </li>
+                  <!-- <li>
+                      <span class="fa-li">
+                        <i class="fas fa-book-open text-warning">
+                        </i>
+                      </span>
+                      L. Niemi, P. Schicho, and T. V. I. Tenkanen,
+                      Singlet-assisted electroweak phase transition at two loops,
+                      <a href="https://dx.doi.org/10.1103/PhysRevD.103.115035" target="_blank" rel="noopener">
+                        Phys. Rev. D 103, 115035</a>
+                      (2021),
+                      <a href="https://arxiv.org/abs/2103.07467"> [2103.07467]</a>.
+                  </li> -->
+                  <li>
+                      <span class="fa-li">
+                        <i class="fas fa-book-open text-warning">
+                        </i>
+                      </span>
+                      D. Croon, O. Gould, P. Schicho, T. V. I. Tenkanen, and G. White,
+                      Theoretical uncertainties for cosmological first-order phase transitions,
+                      <a href="https://dx.doi.org/10.1007/JHEP04(2021)055" target="_blank" rel="noopener">
+                        JHEP 2021, 55</a>
+                      (2021),
+                      <a href="https://arxiv.org/abs/2009.10080"> [2009.10080]</a>.
+                  </li>
+                </ul>
+              </div>
+            </div>
 <!--             <p>
               <script th:inline="javascript">
                 var maxArticles=8;
@@ -1315,6 +1334,7 @@
   <script src="js/talks-data.js"></script>
   <script src="js/talks.js"></script>
   <script src="js/academic.old.js"></script>
+  <script src="js/publications.js"></script>
   <!-- <script src="./js/academic.js"></script> -->
 
 </body>
