@@ -40,6 +40,15 @@ window.TALKS = [
     "category": "Seminar"
   },
   {
+    "title": "Cosmological phase transitions across all length scales",
+    "description": "",
+    "date": "2026-04-22",
+    "location": "invited seminar talk at UESTC, Chengdu, China",
+    "talkUrl": "",
+    "slidesUrl": "/assets/talks/chengdu26.pdf",
+    "category": "Seminar"
+  },
+  {
     "title": "From microphysics to Gravitational Waves for cosmological phase transitions",
     "description": "",
     "date": "2026-04-20",
