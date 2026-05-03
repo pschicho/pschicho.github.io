@@ -12832,3 +12832,85 @@ div.chart {
     color: #ffe08a;
     background: rgba(255, 193, 7, .18);
 }
+
+/* ── Group member cards ──────────────────────────────────────────────────── */
+.member-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 6px;
+    margin-bottom: 4px;
+}
+
+.member-card {
+    display: flex;
+    align-items: stretch;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 0;
+    gap: 0;
+    flex: 0 1 calc(50% - 5px);
+    min-width: 200px;
+    min-height: 80px;
+}
+
+.dark .member-card {
+    border-color: rgba(255,255,255,.15);
+}
+
+.member-photo {
+    flex: 0 0 25%;
+    width: 25%;
+    object-fit: cover;
+    display: block;
+}
+
+.member-photo-placeholder {
+    flex: 0 0 25%;
+    width: 25%;
+    background: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #adb5bd;
+}
+
+.dark .member-photo-placeholder {
+    background: rgba(255,255,255,.08);
+    color: rgba(255,255,255,.35);
+}
+
+.member-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 12px 14px;
+    justify-content: center;
+}
+
+.member-info .member-name {
+    font-weight: 600;
+    font-size: 0.95em;
+    display: block;
+}
+
+.member-info .member-email {
+    font-size: 0.82em;
+    color: #6c757d;
+    display: block;
+}
+
+.dark .member-info .member-email {
+    color: rgba(255,255,255,.55);
+}
+
+.member-info .member-role {
+    font-size: 0.82em;
+    color: #6c757d;
+}
+
+.dark .member-info .member-role {
+    color: rgba(255,255,255,.55);
+}
