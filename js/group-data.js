@@ -25,7 +25,8 @@ window.GROUP_MEMBERS = [
   {
     name:   "Romain Guillermo Reinle",
     level:  "master",
-    status: "active"
+    status: "active",
+    photo:  "assets/img/group/romainReinle.jpeg"
   },
   {
     name:   "Francesco Rescigno",
