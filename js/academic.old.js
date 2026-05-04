@@ -370,9 +370,36 @@
       }
     }
 
+    // Save exact scroll position before the page unloads (reload or navigate away).
+    // This is read back inside imagesLoaded once the layout is fully stable.
+    $(window).on('beforeunload', function() {
+      sessionStorage.setItem('ps_scrollY', window.scrollY);
+    });
+
     // Initialize Scrollspy.
     let $body = $('body');
     $body.scrollspy({offset: navbar_offset });
+
+    // Keep the URL hash in sync with the visible section so a page reload
+    // restores the same position instead of jumping to the top.
+    let _hashSyncTimer;
+    $(window).on('scroll.hashsync', function () {
+      clearTimeout(_hashSyncTimer);
+      _hashSyncTimer = setTimeout(function () {
+        let scrollTop = $(window).scrollTop() + navbar_offset + 1;
+        let current = '';
+        $('section[id]').each(function () {
+          if ($(this).offset().top <= scrollTop) {
+            current = '#' + this.id;
+          }
+        });
+        if (current && current !== '#top') {
+          history.replaceState(null, null, current);
+        } else {
+          history.replaceState(null, null, window.location.pathname + window.location.search);
+        }
+      }, 100);
+    });
 
     // Call `fixScrollspy` when window is resized.
     let resizeTimer;
@@ -411,12 +438,15 @@
           return false;
         });
 
-        // If window hash is set, scroll to hash.
-        // Placing this within `imagesLoaded` prevents scrolling to the wrong location due to dynamic image loading
-        // affecting page layout and position of the target anchor ID.
-        // Note: If there are multiple project widgets on a page, ideally only perform this once after images
-        // from *all* project widgets have finished loading.
-        if (window.location.hash) {
+        // Restore scroll position after layout is fully stable (Isotope done, all images loaded).
+        // On reload: restore the exact pixel position saved before unload.
+        // On first load / direct hash link: scroll to the hash anchor.
+        var navEntry = performance.getEntriesByType('navigation')[0];
+        var isReload = navEntry && navEntry.type === 'reload';
+        var savedY = sessionStorage.getItem('ps_scrollY');
+        if (isReload && savedY !== null) {
+          window.scrollTo(0, parseInt(savedY, 10));
+        } else if (window.location.hash) {
           scrollToAnchor();
         }
       });

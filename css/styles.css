@@ -12916,3 +12916,16 @@ div.chart {
 .dark .member-info .member-role {
     color: rgba(255,255,255,.55);
 }
+
+/* ── Scroll offset for fixed navbar ─────────────────────────────────────── */
+/* Ensures browser-native hash scrolling (page reload, back/forward) lands  */
+/* below the sticky navbar rather than hidden behind it.                     */
+html {
+    scroll-padding-top: 70px;
+}
+
+@media (max-width: 991.98px) {
+    html {
+        scroll-padding-top: 50px;
+    }
+}
