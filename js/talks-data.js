@@ -43,7 +43,7 @@ window.TALKS = [
     "title": "Potentials, rates, and bubble velocities in cosmological phase transitions",
     "description": "",
     "date": "2026-05-04",
-    "location": "invited seminar talk at SISSA, Italy",
+    "location": "seminar talk at SISSA, Italy",
     "talkUrl": "",
     "slidesUrl": "/assets/talks/sissa26.pdf",
     "category": "Seminar"
