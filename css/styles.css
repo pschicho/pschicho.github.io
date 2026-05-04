@@ -12900,6 +12900,8 @@ div.chart {
     font-size: 0.82em;
     color: #6c757d;
     display: block;
+    word-break: break-all;
+    overflow-wrap: anywhere;
 }
 
 .dark .member-info .member-email {
