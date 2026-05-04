@@ -45,6 +45,7 @@ window.TALKS = [
     "date": "2026-05-04",
     "location": "invited seminar talk at SISSA, Italy",
     "talkUrl": "",
+    "slidesUrl": "/assets/talks/sissa26.pdf",
     "category": "Seminar"
   },
   {
