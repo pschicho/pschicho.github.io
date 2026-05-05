@@ -88,6 +88,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
         status.hidden = true;
         list.hidden = false;
+        if (window.MathJax && MathJax.Hub) {
+            MathJax.Hub.Queue(['Typeset', MathJax.Hub, list]);
+        }
     };
 
     const renderLatest = (item) => {
@@ -126,6 +129,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
         latestStatus.hidden = true;
         latestList.hidden = false;
+        if (window.MathJax && MathJax.Hub) {
+            MathJax.Hub.Queue(['Typeset', MathJax.Hub, latestList]);
+        }
     };
 
     // Fetch most-cited (top 5)
