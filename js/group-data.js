@@ -26,6 +26,7 @@ window.GROUP_MEMBERS = [
     name:   "Romain Guillermo Reinle",
     level:  "master",
     status: "active",
+    url:    "https://inspirehep.net/authors/3155445",
     photo:  "assets/img/group/romainReinle.jpeg"
   },
   {
