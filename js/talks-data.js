@@ -18,9 +18,10 @@ window.TALKS = [
   {
     "title": "Uncertainty budgets for bubble wall velocities in cosmological phase transitions",
     "description": "",
-    "date": "2026-05-18",
-    "location": "contributed talk at PLANCK, CERN, Switzerland",
+    "date": "2026-05-19",
+    "location": "contributed talk at PLANCK 2026, CERN, Switzerland",
     "talkUrl": "https://indico.cern.ch/event/1552644/overview",
+    "slidesUrl": "/assets/talks/planck26.pdf",
     "category": "Contributed"
   },
   {
