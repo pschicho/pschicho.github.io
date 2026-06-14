@@ -16,6 +16,22 @@ window.TALKS = [
     "category": "Conference"
   },
   {
+    "title": "Higher-dimensional operators at finite-temperature affect gravitational-wave predictions",
+    "description": "",
+    "date": "2026-06-04",
+    "location": "contributed talk at Extended Scalar Sectors From All Angles 2026, CERN, Switzerland",
+    "talkUrl": "https://indico.cern.ch/event/1619305/",
+    "category": "Contributed"
+  },
+  {
+    "title": "Uncertainty budgets for bubble wall velocities in cosmological phase transitions",
+    "description": "",
+    "date": "2026-06-03",
+    "location": "contributed talk at LISA Cosmology Working Group Workshop 2026, ICC, University of Barcelona, Spain",
+    "talkUrl": "https://indico.icc.ub.edu/event/677/",
+    "category": "Contributed"
+  },
+  {
     "title": "Uncertainty budgets for bubble wall velocities in cosmological phase transitions",
     "description": "",
     "date": "2026-05-19",
