@@ -1,11 +1,27 @@
 window.TALKS = [
   {
-    "title": "Probing early universe phase transition microphysics with gravitational waves",
+    "title": "Baryon number freeze-out in the Standard Model, precisely",
     "description": "",
     "date": "2026-08-31",
     "location": "invited plenary talk at PPC 2026, Sydney, Australia",
     "talkUrl": "https://indico.global/event/15267/",
     "category": "Conference"
+  },
+  {
+    "title": "Flavor effects in baryon number freeze-out in the Standard Model, precisely",
+    "description": "",
+    "date": "2026-08-20",
+    "location": "contributed talk at SEWM26, Helsinki, Finland",
+    "talkUrl": "https://indico.global/event/14246/",
+    "category": "Contributed"
+  },
+  {
+    "title": "Thermodynamic limitations for primordial black holes from cosmological phase transitions",
+    "description": "",
+    "date": "2026-06-18",
+    "location": "contributed talk at NEHOP 2026 -- New Horizons on Primordial Black Hole Physics, CERN, Switzerland",
+    "talkUrl": "https://indico.cern.ch/event/1576682/",
+    "category": "Contributed"
   },
   {
     "title": "Probing early universe phase transition microphysics with gravitational waves",
