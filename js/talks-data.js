@@ -13,6 +13,7 @@ window.TALKS = [
     "date": "2026-08-20",
     "location": "contributed talk at SEWM26, Helsinki, Finland",
     "talkUrl": "https://indico.global/event/14246/",
+    "slidesUrl": "/assets/talks/sewm26.pdf",
     "category": "Contributed"
   },
   {
