@@ -161,10 +161,26 @@
     container.innerHTML = talks.map(renderTalkCard).join("\n");
   }
 
+  // Fill <span data-talks-given="Conference,Workshop"> with how many talks in
+  // those categories have already been given. Upcoming talks are excluded, so
+  // the counts match the CV, which only lists talks already delivered.
+  function renderGivenCounts(pastTalks) {
+    var spans = document.querySelectorAll("[data-talks-given]");
+    Array.prototype.forEach.call(spans, function (span) {
+      var wanted = span.getAttribute("data-talks-given").split(",").map(function (name) {
+        return name.trim();
+      });
+      span.textContent = String(pastTalks.filter(function (talk) {
+        return wanted.indexOf(talk.category) !== -1;
+      }).length);
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     if (!Array.isArray(window.TALKS) || window.TALKS.length === 0) {
       renderTalksInElement("talks-preview", []);
       renderTalksInElement("talks-list", []);
+      renderGivenCounts([]);
       return;
     }
 
@@ -179,6 +195,8 @@
         return parseTalkDate(talk).getTime() < now.getTime();
       })
       .sort(byDateDesc);
+
+    renderGivenCounts(pastTalks);
 
     var previewTalks = futureTalks.slice(0, 2).sort(byDateDesc).concat(pastTalks.slice(0, 1));
 
