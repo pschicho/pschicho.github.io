@@ -48,6 +48,23 @@
     return parseTalkDate(a).getTime() - parseTalkDate(b).getTime();
   }
 
+  // A talk reads as "<type> <connector> <event>, <location>", dropping whichever
+  // parts are absent. Kept in one place so the CV generator can compose the same
+  // sentence from the same fields.
+  function describeTalk(talk) {
+    var text = talk.type || "";
+    var connector = talk.connector || "at";
+    if (talk.event) {
+      text += " " + connector + " " + talk.event;
+      if (talk.location) {
+        text += ", " + talk.location;
+      }
+    } else if (talk.location) {
+      text += " " + connector + " " + talk.location;
+    }
+    return text;
+  }
+
   function escapeHtml(value) {
     return String(value)
       .replace(/&/g, "&amp;")
@@ -118,7 +135,7 @@
       "      <div>",
       '        <span itemprop="startDate">' + escapeHtml(formatTalkDate(talk)) + "</span>",
       '        <span class="middot-divider"></span>',
-      '        <span itemprop="location">' + escapeHtml(talk.location) + "</span>",
+      '        <span itemprop="location">' + escapeHtml(describeTalk(talk)) + "</span>",
       "      </div>",
       "    </div>",
       '    <div class="btn-links">' + buttons.join("\n") + "</div>",
