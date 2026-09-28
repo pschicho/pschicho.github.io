@@ -18,15 +18,15 @@ window.GROUP_MEMBERS = [
   },
   {
     name:   "Salma Kämpf",
-    level:  "master",
+    level:  "phd",
     status: "active",
     photo:  "assets/img/group/salmaKaempf.jpeg"
   },
   {
     name:   "Romain Guillermo Reinle",
     level:  "master",
-    status: "active",
-    url:    "https://inspirehep.net/authors/3155445",
+    status: "former",
+    url:    "https://inspirehep.net/authors/3160187",
     photo:  "assets/img/group/romainReinle.jpeg"
   },
   {
