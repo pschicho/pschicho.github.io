@@ -141,7 +141,7 @@
               </li> -->
               <li class="nav-item">
                 <a class="nav-link" href="#teaching" data-target="#teaching">
-                  <span>Outreach & Teaching</span>
+                  <span>Teaching</span>
                 </a>
               </li>
               <li class="nav-item">
@@ -901,6 +901,12 @@
                                         <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2009.10080" target=_blank rel=noopener>
                                             2009.10080
                                         </a>
+                                        <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2112.05472" target=_blank rel=noopener>
+                                            2112.05472
+                                        </a>
+                                        <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2405.18349" target=_blank rel=noopener>
+                                            2405.18349
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-4 order-first" align=center>
@@ -932,12 +938,17 @@
                                     </div>
                                     <div class=article-style>
                                       DRalgo is an algorithmic implementation that constructs an effective high-temperature theory for generic models.
+                                      The Mathematica package automates the matching of 4d thermal field theories to their 3d EFTs at next-to-leading order
+                                      and, since its latest update, of higher-dimensional operators at one loop.
                                     </div>
                                     <div class=btn-links>
                                         <!-- <a class="btn btn-outline-primary btn-page-header" href=/slides/example/ target=_blank>Slides</a> -->
                                         <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2205.08815" target=_blank rel=noopener>
                                             2205.08815
-                                        </a>                                        
+                                        </a>
+                                        <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2605.15176" target=_blank rel=noopener>
+                                            2605.15176
+                                        </a>
                                         <a class="btn btn-outline-primary btn-page-header" href=https://github.com/DR-algo target=_blank rel=noopener>
                                             <i class="fab fa-github mr-1"></i>
                                             Follow
@@ -975,10 +986,17 @@
                                         <!-- <a class="btn btn-outline-primary btn-page-header" href=/slides/example/ target=_blank>Slides</a> -->
                                         <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2411.04970" target=_blank rel=noopener>
                                             2411.04970
-                                        </a>                                        
+                                        </a>
+                                        <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2510.27691" target=_blank rel=noopener>
+                                            2510.27691
+                                        </a>
                                         <a class="btn btn-outline-primary btn-page-header" href=https://github.com/Wall-Go target=_blank rel=noopener>
                                             <i class="fab fa-github mr-1"></i>
                                             Follow
+                                        </a>
+                                        <a class="btn btn-outline-primary btn-page-header" href=https://wallgo.readthedocs.io target=_blank rel=noopener>
+                                            <i class="fas fa-book mr-1"></i>
+                                            Docs
                                         </a>
                                     </div>
                                 </div>
@@ -1107,38 +1125,14 @@
       <div class="container">
         <div class="row">
           <div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
-            <h1>Outreach & Teaching</h1>
+            <h1>Teaching</h1>
           </div>
           <div class="col-12 col-lg-8">
             <div class="section-subheading article-title mb-0 mt-0">
               Lectures
             </div>
-            <ul>
-              <li>
-                <a href="https://indico.mitp.uni-mainz.de/event/468/">
-                  Gravitational waves from first-order phase transitions
-                </a>
-                at the MPA Retreat 2026, Castle Ebernburg
-                (Lectures
-                <a href="assets/talks/mpa26_lec1.pdf">1</a>,
-                <a href="assets/talks/mpa26_lec2.pdf">2</a>,
-                <a href="assets/talks/mpa26_lec3.pdf">3</a>)
-              </li>
-              <li>
-                <a href="https://qis.server.uni-frankfurt.de/qisserver/rds?state=verpublish&status=init&vmfile=no&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung&veranstaltung.veranstid=360363">
-                  Theoretische Physik 1: Mathematische Ergänzungen
-                </a>
-                <a href="lectures/metp1.pdf">(Skript)</a>
-              </li>
-              <li>
-                Exercises at Phase transitions in the early universe at the
-                <a href="https://agenda.infn.it/event/28760/">
-                  Theoretical Aspects of Astroparticle Physics, Cosmology and Gravitation school
-                </a>
-                at the
-                Galileo Galilei Institute for Theoretical Physics
-              </li>
-            </ul>
+            <div id="lectures-root" class="mt-3"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -1286,6 +1280,9 @@
   <script src="js/talks.js"></script>
   <script src="js/group-data.js"></script>
   <script src="js/group.js"></script>
+  <script src="js/lectures-data.js"></script>
+  <script src="js/outreach-data.js"></script>
+  <script src="js/teaching.js"></script>
   <script src="js/site.js"></script>
   <script src="js/publications.js"></script>
   <!-- <script src="./js/academic.js"></script> -->
