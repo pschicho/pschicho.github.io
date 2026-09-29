@@ -42,17 +42,29 @@
   window.addEventListener('hashchange', scrollToAnchor);
 
   /* ---------------------------------------------------------------------------
-   * Scrollspy helpers.
+   * Scrollspy: highlight the navbar link of the section at the top of the view.
+   * (Bootstrap 5's own scrollspy uses IntersectionObserver thresholds, which
+   * misbehave for sections taller than the viewport.)
    * --------------------------------------------------------------------------- */
 
-  function fixScrollspy() {
-    let $body = $('body');
-    let data = $body.data('bs.scrollspy');
-    if (data) {
-      data._config.offset = getNavBarHeight();
-      $body.data('bs.scrollspy', data);
-      $body.scrollspy('refresh');
-    }
+  function updateScrollspy() {
+    let $links = $('#navbar-main .navbar-nav .nav-link');
+    let scrollTop = $(window).scrollTop() + getNavBarHeight() + 1;
+    let atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 1;
+    let $active = $links.first();
+    let best = -Infinity;
+    $links.each(function () {
+      if (!this.hash || this.pathname !== window.location.pathname) return;
+      let target = document.getElementById(this.hash.substring(1));
+      if (!target) return;
+      let top = $(target).offset().top;
+      if ((atBottom || top <= scrollTop) && top > best) {
+        best = top;
+        $active = $(this);
+      }
+    });
+    $links.not($active).removeClass('active');
+    $active.addClass('active');
   }
 
   /* ---------------------------------------------------------------------------
@@ -88,7 +100,7 @@
   $(document).on('click', '.navbar-collapse.show', function (e) {
     let $target = $(e.target).is('a') ? $(e.target) : $(e.target).parent();
     if ($target.is('a') && $target.attr('class') !== 'dropdown-toggle') {
-      $(this).collapse('hide');
+      bootstrap.Collapse.getOrCreateInstance(this, { toggle: false }).hide();
     }
   });
 
@@ -113,8 +125,9 @@
       sessionStorage.setItem('ps_scrollY', window.scrollY);
     });
 
-    // Initialize Bootstrap Scrollspy.
-    $('body').scrollspy({ offset: getNavBarHeight() });
+    // Scrollspy.
+    updateScrollspy();
+    $(window).on('scroll', updateScrollspy);
 
     // Keep the URL hash in sync with the visible section.
     // This enables a page reload to land on the same section.
@@ -135,11 +148,11 @@
       }, 100);
     });
 
-    // Re-init Scrollspy when window is resized.
+    // Update Scrollspy when window is resized.
     let resizeTimer;
     $(window).on('resize', function () {
       clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(fixScrollspy, 200);
+      resizeTimer = setTimeout(updateScrollspy, 200);
     });
 
     // Initialize Isotope project grids once all images have loaded.
