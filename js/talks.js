@@ -79,18 +79,49 @@
     container.innerHTML = talks.map(renderTalkCard).join("\n");
   }
 
+  // "Conference,Workshop" -> ["Conference", "Workshop"]; "" -> [].
+  function parseCategories(value) {
+    return (value || "").split(",").map(function (name) {
+      return name.trim();
+    }).filter(Boolean);
+  }
+
+  function inCategories(talk, categories) {
+    return categories.length === 0 || categories.indexOf(talk.category) !== -1;
+  }
+
   // Fill <span data-talks-given="Conference,Workshop"> with how many talks in
   // those categories have already been given. Upcoming talks are excluded, so
   // the counts match the CV, which only lists talks already delivered.
   function renderGivenCounts(pastTalks) {
     var spans = document.querySelectorAll("[data-talks-given]");
     Array.prototype.forEach.call(spans, function (span) {
-      var wanted = span.getAttribute("data-talks-given").split(",").map(function (name) {
-        return name.trim();
-      });
+      var wanted = parseCategories(span.getAttribute("data-talks-given"));
       span.textContent = String(pastTalks.filter(function (talk) {
-        return wanted.indexOf(talk.category) !== -1;
+        return inCategories(talk, wanted);
       }).length);
+    });
+  }
+
+  // <button data-talks-filter="Seminar"> restricts #talks-list to those
+  // categories; an empty value shows every talk. Adding data-talks-upcoming
+  // further keeps only talks that have not happened yet.
+  function setupFilters(allTalks, futureTalks) {
+    var buttons = document.querySelectorAll("[data-talks-filter]");
+    Array.prototype.forEach.call(buttons, function (button) {
+      button.addEventListener("click", function () {
+        Array.prototype.forEach.call(buttons, function (other) {
+          var active = other === button;
+          other.classList.toggle("active", active);
+          other.setAttribute("aria-pressed", String(active));
+        });
+        var wanted = parseCategories(button.getAttribute("data-talks-filter"));
+        var upcomingOnly = button.hasAttribute("data-talks-upcoming");
+        renderTalksInElement("talks-list", allTalks.filter(function (talk) {
+          return inCategories(talk, wanted) &&
+            (!upcomingOnly || futureTalks.indexOf(talk) !== -1);
+        }));
+      });
     });
   }
 
@@ -131,5 +162,6 @@
 
     var allTalks = window.TALKS.slice().sort(byDateDesc);
     renderTalksInElement("talks-list", allTalks);
+    setupFilters(allTalks, futureTalks);
   });
 })();
