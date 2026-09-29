@@ -94,6 +94,29 @@
   });
 
   /* ---------------------------------------------------------------------------
+   * Project filters. Bound right away rather than after window load, so a click
+   * while images are still loading doesn't follow href="#" to the top. Before
+   * Isotope is ready, items are shown/hidden directly and the chosen filter is
+   * remembered for Isotope's initial layout.
+   * --------------------------------------------------------------------------- */
+
+  $('.project-filters a').on('click', function (event) {
+    event.preventDefault();
+    let selector   = $(this).attr('data-filter');
+    let $section   = $(this).closest('section');
+    let $container = $section.find('.projects-container');
+    $section.data('project-filter', selector);
+    if ($container.data('isotope')) {
+      $container.isotope({ filter: selector });
+    } else {
+      $container.find('.isotope-item').each(function () {
+        $(this).toggle($(this).is(selector));
+      });
+    }
+    $(this).addClass('active').siblings().removeClass('active all');
+  });
+
+  /* ---------------------------------------------------------------------------
    * Collapse mobile navbar when a link is clicked.
    * --------------------------------------------------------------------------- */
 
@@ -166,14 +189,7 @@
           itemSelector: '.isotope-item',
           layoutMode:   layout,
           masonry:      { gutter: 20 },
-          filter:       $section.find('.default-project-filter').text()
-        });
-
-        $section.find('.project-filters a').on('click', function () {
-          let selector = $(this).attr('data-filter');
-          $container.isotope({ filter: selector });
-          $(this).removeClass('active').addClass('active').siblings().removeClass('active all');
-          return false;
+          filter:       $section.data('project-filter') || $section.find('.default-project-filter').text()
         });
 
         // Restore scroll position once layout is fully stable (post-Isotope).
