@@ -45,15 +45,15 @@
       return '<span>' + escapeHtml(text) + '</span>';
     }).join('<span class="middot-divider"></span>');
     var btnClass = item.small
-      ? 'btn btn-outline-primary my-1 mr-1 btn-sm'
+      ? 'btn btn-outline-primary my-1 me-1 btn-sm'
       : 'btn btn-outline-primary btn-page-header';
     var buttons = (item.buttons || []).map(function (b) {
       return externalLink(b.url, escapeHtml(b.label), ' class="' + btnClass + '"');
     }).join('\n');
 
     return [
-      '<div class="media stream-item view-compact">',
-      '  <div class="media-body">',
+      '<div class="d-flex align-items-start stream-item view-compact">',
+      '  <div class="flex-grow-1">',
       '    <div class="section-subheading article-title mb-0 mt-0">' + title + '</div>',
       item.description ? '    <div class="article-style">' + escapeHtml(item.description) + '</div>' : '',
       '    <div class="stream-meta article-metadata"><div>' + meta + '</div></div>',

@@ -3,8 +3,11 @@
 Static site served by GitHub Pages at <https://pschicho.github.io/>. No build step:
 edit the files and push.
 
-Built on the [Wowchemy / Hugo Academic](https://wowchemy.com) theme (v5.7, Bootstrap 4.6),
-exported to plain HTML. Libraries come from cdnjs: jQuery, Bootstrap 4 JS, Isotope and
+Built on the [Wowchemy / Hugo Academic](https://wowchemy.com) theme (v5.7), exported to
+plain HTML and moved to Bootstrap 5.3. `css/styles.css` holds the theme rules, plus a
+short "Bootstrap 5 settings" block at the top that restores the theme's Bootstrap
+customisations (colours, gutters, container width, navbar). Libraries come from cdnjs:
+Bootstrap 5 (CSS and JS), jQuery, Isotope and
 imagesLoaded (research filter), MathJax 2 (LaTeX in INSPIRE titles).
 
 ## Pages
