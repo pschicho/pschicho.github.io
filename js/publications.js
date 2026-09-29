@@ -50,50 +50,37 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const citationLabel = (count) => `${count} citation${count === 1 ? '' : 's'}`;
 
-    const renderPublications = (items) => {
-        list.innerHTML = items.map((item) => {
-            const metadata = item.metadata || {};
-            const title = ((metadata.titles || [])[0] || {}).title || 'Untitled publication';
-            const authors = summarizeAuthors(metadata.authors);
-            const publication = publicationLabel(metadata.publication_info);
-            const year = (((metadata.publication_info || [])[0] || {}).year || '').toString();
-            const citationCount = Number(metadata.citation_count || 0);
-            const arxiv = ((metadata.arxiv_eprints || [])[0] || {}).value;
-            const doi = ((metadata.dois || [])[0] || {}).value;
-            const inspireUrl = metadata.control_number
-                ? `https://inspirehep.net/literature/${metadata.control_number}`
-                : 'https://inspirehep.net/authors/1639147';
+    const esc = window.Site.escapeHtml;
 
-            const metaBits = [publication, year].filter(Boolean).join(' · ');
-            const links = [
-                `<a href="${inspireUrl}" target="_blank" rel="noopener">INSPIRE</a>`,
-                doi ? `<a href="https://doi.org/${doi}" target="_blank" rel="noopener">DOI</a>` : '',
-                arxiv ? `<a href="https://arxiv.org/abs/${arxiv}" target="_blank" rel="noopener">arXiv</a>` : '',
-            ].filter(Boolean).join('');
+    // INSPIRE titles may contain LaTeX ($…$, left as text for MathJax) and
+    // MathML (<math>…</math>). Keep MathML elements, turn anything else into
+    // plain text. A <template> parses the markup without running it.
+    const MATHML_TAGS = new Set(['math', 'mrow', 'mi', 'mn', 'mo', 'ms', 'mtext', 'mspace',
+        'msup', 'msub', 'msubsup', 'mfrac', 'msqrt', 'mroot', 'mover', 'munder', 'munderover',
+        'mstyle', 'mpadded', 'mphantom', 'mtable', 'mtr', 'mtd', 'semantics', 'annotation']);
+    const MATHML_ATTRS = new Set(['display', 'mathvariant', 'stretchy', 'fence', 'separator', 'accent']);
 
-            return `
-                <li class="publication-card">
-                  <div class="publication-card-topline">
-                    <span class="publication-rank">Top ${items.indexOf(item) + 1}</span>
-                    <span class="publication-citations">${citationLabel(citationCount)}</span>
-                  </div>
-                  <h3 class="publication-card-title">
-                    <a href="${inspireUrl}" target="_blank" rel="noopener">${title}</a>
-                  </h3>
-                  <p class="publication-card-authors">${authors}</p>
-                  ${metaBits ? `<p class="publication-card-meta">${metaBits}</p>` : ''}
-                  <div class="publication-card-links">${links}</div>
-                </li>`;
-        }).join('');
-
-        status.hidden = true;
-        list.hidden = false;
-        if (window.MathJax && MathJax.Hub) {
-            MathJax.Hub.Queue(['Typeset', MathJax.Hub, list]);
-        }
+    const sanitizeTitle = (title) => {
+        const template = document.createElement('template');
+        template.innerHTML = title;
+        const clean = (node) => {
+            [...node.childNodes].forEach((child) => {
+                if (child.nodeType === Node.TEXT_NODE) return;
+                if (child.nodeType !== Node.ELEMENT_NODE || !MATHML_TAGS.has(child.localName)) {
+                    child.replaceWith(document.createTextNode(child.textContent));
+                    return;
+                }
+                [...child.attributes].forEach((attr) => {
+                    if (!MATHML_ATTRS.has(attr.name)) child.removeAttribute(attr.name);
+                });
+                clean(child);
+            });
+        };
+        clean(template.content);
+        return template.innerHTML;
     };
 
-    const renderLatest = (item) => {
+    const publicationCard = (item, badge) => {
         const metadata = item.metadata || {};
         const title = ((metadata.titles || [])[0] || {}).title || 'Untitled publication';
         const authors = summarizeAuthors(metadata.authors);
@@ -108,30 +95,44 @@ window.addEventListener('DOMContentLoaded', () => {
 
         const metaBits = [publication, year].filter(Boolean).join(' · ');
         const links = [
-            `<a href="${inspireUrl}" target="_blank" rel="noopener">INSPIRE</a>`,
-            doi ? `<a href="https://doi.org/${doi}" target="_blank" rel="noopener">DOI</a>` : '',
-            arxiv ? `<a href="https://arxiv.org/abs/${arxiv}" target="_blank" rel="noopener">arXiv</a>` : '',
+            window.Site.externalLink(inspireUrl, 'INSPIRE'),
+            doi ? window.Site.externalLink(`https://doi.org/${doi}`, 'DOI') : '',
+            arxiv ? window.Site.externalLink(`https://arxiv.org/abs/${arxiv}`, 'arXiv') : '',
         ].filter(Boolean).join('');
 
-        latestList.innerHTML = `
+        return `
             <li class="publication-card">
               <div class="publication-card-topline">
-                <span class="publication-rank">Latest</span>
+                <span class="publication-rank">${esc(badge)}</span>
                 <span class="publication-citations">${citationLabel(citationCount)}</span>
               </div>
               <h3 class="publication-card-title">
-                <a href="${inspireUrl}" target="_blank" rel="noopener">${title}</a>
+                ${window.Site.externalLink(inspireUrl, sanitizeTitle(title))}
               </h3>
-              <p class="publication-card-authors">${authors}</p>
-              ${metaBits ? `<p class="publication-card-meta">${metaBits}</p>` : ''}
+              <p class="publication-card-authors">${esc(authors)}</p>
+              ${metaBits ? `<p class="publication-card-meta">${esc(metaBits)}</p>` : ''}
               <div class="publication-card-links">${links}</div>
             </li>`;
+    };
 
+    const typeset = (element) => {
+        if (window.MathJax && MathJax.Hub) {
+            MathJax.Hub.Queue(['Typeset', MathJax.Hub, element]);
+        }
+    };
+
+    const renderPublications = (items) => {
+        list.innerHTML = items.map((item, index) => publicationCard(item, `Top ${index + 1}`)).join('');
+        status.hidden = true;
+        list.hidden = false;
+        typeset(list);
+    };
+
+    const renderLatest = (item) => {
+        latestList.innerHTML = publicationCard(item, 'Latest');
         latestStatus.hidden = true;
         latestList.hidden = false;
-        if (window.MathJax && MathJax.Hub) {
-            MathJax.Hub.Queue(['Typeset', MathJax.Hub, latestList]);
-        }
+        typeset(latestList);
     };
 
     // Fetch most-cited (top 5)

@@ -16,25 +16,12 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     function streamItem(o) {
-        const titleHtml = o.url
-            ? `<a href="${o.url}" target="_blank" rel="noopener">${o.title}</a>`
-            : o.title;
-        const whereHtml = o.where
-            ? `<span class="middot-divider"></span><span>${o.where}</span>`
-            : '';
-        const buttons = (o.links || []).map(l =>
-            `<a class="btn btn-outline-primary btn-page-header" href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`
-        ).join('\n');
-        return `
-        <div class="media stream-item view-compact">
-            <div class="media-body">
-                <div class="section-subheading article-title mb-0 mt-0">${titleHtml}</div>
-                <div class="stream-meta article-metadata">
-                    <span>${formatDate(o)}</span>${whereHtml}
-                </div>
-                ${buttons ? `<div class="btn-links">${buttons}</div>` : ''}
-            </div>
-        </div>`;
+        return window.Site.streamItem({
+            title: o.title,
+            url: o.url,
+            meta: [formatDate(o), o.where],
+            buttons: o.links
+        });
     }
 
     // Lectures

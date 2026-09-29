@@ -1,6 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('group-members-root');
     if (!root || !window.GROUP_MEMBERS) return;
+    const esc = window.Site.escapeHtml;
 
     const LEVELS = [
         { key: 'phd',     label: 'PhD students' },
@@ -9,15 +10,17 @@ window.addEventListener('DOMContentLoaded', () => {
         { key: 'visitor', label: 'Visitors' },
     ];
 
+    function nameLink(m) {
+        return m.url ? window.Site.externalLink(m.url, esc(m.name)) : esc(m.name);
+    }
+
     function memberCard(m) {
-        const nameHtml = m.url
-            ? `<a href="${m.url}" target="_blank" rel="noopener">${m.name}</a>`
-            : m.name;
+        const nameHtml = nameLink(m);
         const photoHtml = m.photo
-            ? `<img class="member-photo" src="${m.photo}" alt="${m.name}" loading="lazy">`
+            ? `<img class="member-photo" src="${esc(m.photo)}" alt="${esc(m.name)}" loading="lazy">`
             : `<div class="member-photo-placeholder"><i class="fas fa-user"></i></div>`;
         const emailHtml = m.email
-            ? `<span class="member-email"><i class="fas fa-envelope fa-xs" style="margin-right:4px;opacity:.6;"></i>${m.email.replace('@', '[at]')}</span>`
+            ? `<span class="member-email"><i class="fas fa-envelope fa-xs" style="margin-right:4px;opacity:.6;"></i>${esc(m.email.replace('@', '[at]'))}</span>`
             : '';
         return `
         <div class="member-card">
@@ -56,11 +59,9 @@ window.addEventListener('DOMContentLoaded', () => {
     // Former students — plain linked list, no cards
     if (former.length > 0) {
         const items = former.map(m => {
-            const nameHtml = m.url
-                ? `<a href="${m.url}" target="_blank" rel="noopener">${m.name}</a>`
-                : m.name;
+            const nameHtml = nameLink(m);
             const emailSpan = m.email
-                ? ` <span style="font-size:.85em;color:#6c757d;">(${m.email})</span>`
+                ? ` <span style="font-size:.85em;color:#6c757d;">(${esc(m.email)})</span>`
                 : '';
             return `<li>${nameHtml}${emailSpan}</li>`;
         }).join('\n');

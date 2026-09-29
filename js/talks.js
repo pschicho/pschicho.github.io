@@ -1,23 +1,4 @@
 (function () {
-  function getSiteRootUrl() {
-    var currentScript = document.currentScript;
-    var scriptSrc = currentScript && currentScript.src ? currentScript.src : "";
-
-    if (!scriptSrc) {
-      var scripts = document.getElementsByTagName("script");
-      for (var index = scripts.length - 1; index >= 0; index -= 1) {
-        if (scripts[index].src && /\/js\/talks\.js(?:\?.*)?$/.test(scripts[index].src)) {
-          scriptSrc = scripts[index].src;
-          break;
-        }
-      }
-    }
-
-    return scriptSrc ? scriptSrc.replace(/\/js\/talks\.js(?:\?.*)?$/, "/") : "";
-  }
-
-  var siteRootUrl = getSiteRootUrl();
-
   function parseTalkDate(talk) {
     return new Date(talk.date + "T00:00:00");
   }
@@ -65,86 +46,23 @@
     return text;
   }
 
-  function escapeHtml(value) {
-    return String(value)
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/\"/g, "&quot;")
-      .replace(/'/g, "&#39;");
-  }
-
-  function resolveTalkUrl(url) {
-    if (!url) {
-      return url;
-    }
-
-    if (window.location.protocol === "file:" && url.charAt(0) === "/" && siteRootUrl) {
-      return siteRootUrl + url.slice(1);
-    }
-
-    return url;
-  }
-
   function renderTalkCard(talk) {
-    var descriptionHtml = talk.description
-      ? '<div class="article-style">' + escapeHtml(talk.description) + "</div>"
-      : "";
+    var buttons = [
+      { label: "PDF", url: talk.pdfUrl },
+      { label: "Slides", url: talk.slidesUrl },
+      { label: "Video", url: talk.videoUrl }
+    ].filter(function (button) {
+      return button.url;
+    });
 
-    var buttons = [];
-    if (talk.pdfUrl) {
-      buttons.push(
-        '<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="' +
-          escapeHtml(resolveTalkUrl(talk.pdfUrl)) +
-          '" target="_blank" rel="noopener">PDF</a>'
-      );
-    }
-    if (talk.slidesUrl) {
-      buttons.push(
-        '<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="' +
-          escapeHtml(resolveTalkUrl(talk.slidesUrl)) +
-          '" target="_blank" rel="noopener">Slides</a>'
-      );
-    }
-    if (talk.videoUrl) {
-      buttons.push(
-        '<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="' +
-          escapeHtml(resolveTalkUrl(talk.videoUrl)) +
-          '" target="_blank" rel="noopener">Video</a>'
-      );
-    }
-
-    var titleHtml = escapeHtml(talk.title);
-    if (talk.talkUrl) {
-      titleHtml =
-        '<a href="' +
-        escapeHtml(resolveTalkUrl(talk.talkUrl)) +
-        '" itemprop="url" target="_blank" rel="noopener">' +
-        escapeHtml(talk.title) +
-        '</a>';
-    }
-
-    return [
-      '<div class="media stream-item view-compact">',
-      '  <div class="media-body">',
-      '    <div class="section-subheading article-title mb-0 mt-0">',
-      '      ' + titleHtml,
-      "    </div>",
-      descriptionHtml,
-      '    <div class="stream-meta article-metadata">',
-      "      <div>",
-      '        <span itemprop="startDate">' + escapeHtml(formatTalkDate(talk)) + "</span>",
-      '        <span class="middot-divider"></span>',
-      '        <span itemprop="location">' + escapeHtml(describeTalk(talk)) + "</span>",
-      "      </div>",
-      "    </div>",
-      '    <div class="btn-links">' + buttons.join("\n") + "</div>",
-      "  </div>",
-      '  <div class="ml-3"></div>',
-      "</div>"
-    ]
-      .filter(Boolean)
-      .join("\n");
+    return window.Site.streamItem({
+      title: talk.title,
+      url: talk.talkUrl,
+      description: talk.description,
+      meta: [formatTalkDate(talk), describeTalk(talk)],
+      buttons: buttons,
+      small: true
+    });
   }
 
   function renderTalksInElement(elementId, talks) {
