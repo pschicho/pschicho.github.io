@@ -3201,3 +3201,15 @@ html {
 .dark .logo-on-dark {
     display: inline;
 }
+
+/* group section: the member list sits next to the "Group members" heading, so drop
+   the list's own top spacing and line its first label up with the heading */
+@media (min-width: 768px) {
+    #group-members-root > div:first-child {
+        margin-top: 0 !important;
+    }
+
+    #group-members-root > div:first-child > h4 {
+        margin-top: 11px; /* baseline of the larger "Group members" heading */
+    }
+}
