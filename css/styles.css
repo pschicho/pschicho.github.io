@@ -3176,3 +3176,28 @@ html {
         scroll-padding-top: 50px;
     }
 }
+
+/* TPC group logo: small round mark in the navbar, light/dark versions of the full logo */
+.nav-logo {
+    height: 1.35em;
+    width: auto;
+    margin-right: .4em;
+}
+
+.group-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.group-logo img {
+    width: min(600px, 100%);
+    height: auto;
+}
+
+.logo-on-dark, .dark .logo-on-light {
+    display: none;
+}
+
+.dark .logo-on-dark {
+    display: inline;
+}
