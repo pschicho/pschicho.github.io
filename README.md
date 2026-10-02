@@ -44,8 +44,9 @@ touches the HTML. Each file documents its fields at the top.
 - `assets/doc/` – CV and talk-list PDFs
 - `assets/talks/` – slides and lecture notes (`<event><yy>.pdf`, `<event><yy>_lec<n>.pdf`)
 - `assets/img/` – images. Keep figures as SVG so they scale; run large ones through
-  `npx svgo --multipass` and keep any embedded bitmaps at a sensible resolution
-  (`universe.svg` embeds three JPEGs, ≤1500 px).
+  `npx svgo --multipass` and keep any embedded bitmaps at a sensible resolution.
+  `universe.svg` and `universe-dark.svg` are generated from the TikZ source in
+  `tools/universe/` by `python3 tools/make_universe.py`; edit the source, not the SVGs.
 
 ## Local preview
 
