@@ -765,7 +765,7 @@ video {
     transform:scale(1.1)
 }
 
-figure img {
+figure img, figure video {
     height: auto;
     max-width:100%
 }
