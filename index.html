@@ -759,12 +759,17 @@
                       </div>
                       <div class="col-12 col-md-8">
                           <div id="group-members-root"></div>
-                          <p style="line-height:1.5; margin-top:28px; margin-bottom:0;">
-                            <strong>For students:</strong> If you are interested in a Master's thesis in our group, please get in touch via the
-                            <a href="#contact" data-target="#contact">contact section</a>.
-                            You can explore our current topics in the
-                            <a href="#research" data-target="#research">research overview</a>.
-                          </p>
+                          <div class="thesis-callout">
+                            <p class="mb-0">
+                              <strong>Interested in a Master's thesis in our group?</strong>
+                              Get in touch via the enquiry form.
+                              You can explore our current topics in the
+                              <a href="#research" data-target="#research">research overview</a>.
+                            </p>
+                            <a class="btn btn-primary" href="thesis/index.html">
+                              Thesis enquiry form<i class="fas fa-angle-right ms-2" aria-hidden="true"></i>
+                            </a>
+                          </div>
                       </div>
                   </div>
               </div>
@@ -802,14 +807,14 @@
 
                      <div class="col-12 isotope-item js-id-GW">
                         <div class="col-lg-12 mb-5 view-showcase">
-                            <div class="row align-items-center">
+                            <div class="row align-items-center research-item">
                                 <div class="col-12 col-md-8">
-                                    <div class="section-subheading article-title mb-0 mt-0">
+                                    <div class="section-subheading article-title mb-0 mt-0 order-1">
                                         <a href="#" onclick="return false">
                                           Precision thermodynamics for cosmological phase transitions
                                         </a>
                                     </div>
-                                    <div class=article-style>
+                                    <div class="article-style order-3">
                                       Understanding the connection between the matter content of the universe and its thermal history is a major challenge in cosmology.
                                       The detection of gravitational waves (GW) from binary black hole mergers at <a href="https://www.ligo.caltech.edu" target=_blank rel=noopener>LIGO</a> has invigorated efforts to scope the universe in a broad temperature range and answer the question:
                                       is there new physics at the electroweak scale?
@@ -817,17 +822,18 @@
                                       The electroweak phase transition (EWPT) in beyond the Standard Model (BSM) theories could be
                                       strongly first order, possibly via complex multi-step transitions,
                                       and thereby explain baryogenesis and in turn the baryon asymmetry of the universe.
-                                      <br>
+                                    </div>
+                                    <div class="article-style order-5">
                                       Such a transition would also source a stochastic GW background that propagates
-                                      freely to us from the early universe (cf. top fig. left).
+                                      freely to us from the early universe (cf. top figure).
                                       Its signal is expected in the millihertz band of the
                                       <a href="https://www.lisamission.org" target=_blank rel=noopener>Laser Interferometer Space Antenna (LISA)</a>,
-                                      a space-based detector of three spacecraft trailing the Earth around the Sun (cf. animation left)
+                                      a space-based detector of three spacecraft trailing the Earth around the Sun (cf. animation)
                                       that ESA plans to launch in 2035.
                                       Turning such a measurement into a statement about particle physics
                                       requires precise predictions of the phase transition thermodynamics.
                                     </div>
-                                    <div class=btn-links>
+                                    <div class="btn-links order-last">
                                         <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2009.10080" target=_blank rel=noopener>
                                             2009.10080
                                         </a>
@@ -839,11 +845,11 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-4 order-first" align=center>
+                                <div class="col-12 col-md-4 order-first research-figures" align=center>
                                     <!-- <img class="img-light"
                                       src=assets/img/contour.svg
                                       height=relative width=80% alt="two step phase transition" loading=lazy> -->
-                                    <figure
+                                    <figure class=order-2
                                       data-copyright="© 2025 Philipp Schicho"
                                       data-sources="Parts adapted from https://kurzgesagt.org, 2023">
                                         <img class="logo-on-light"
@@ -853,7 +859,7 @@
                                           src=assets/img/universe-dark.svg
                                           height=relative width=80% alt="early universe phase transition" loading=lazy>
                                     </figure>
-                                    <figure
+                                    <figure class=order-4
                                       data-copyright="© Anna Kormu"
                                       data-sources="https://blogs.helsinki.fi/koranna/visualisations/">
                                         <video src="https://blogs.helsinki.fi/koranna/files/2021/08/lisa_gw_blue.mp4"
@@ -873,19 +879,19 @@
 
                     <div class="col-12 isotope-item js-id-GW">
                         <div class="col-lg-12 mb-5 view-showcase">
-                            <div class="row align-items-center">
+                            <div class="row align-items-center research-item">
                                 <div class="col-12 col-md-8">
-                                    <div class="section-subheading article-title mb-0 mt-0">
+                                    <div class="section-subheading article-title mb-0 mt-0 order-1">
                                         <a href=https://github.com/DR-algo>
                                           DRalgo: automated 3d EFT framework for thermal field theories
                                         </a>
                                     </div>
-                                    <div class=article-style>
+                                    <div class="article-style order-3">
                                       DRalgo is an algorithmic implementation that constructs an effective high-temperature theory for generic models.
                                       The Mathematica package automates the matching of 4d thermal field theories to their 3d EFTs at next-to-leading order
                                       and, since its latest update, of higher-dimensional operators at one loop.
                                     </div>
-                                    <div class=btn-links>
+                                    <div class="btn-links order-last">
                                         <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2205.08815" target=_blank rel=noopener>
                                             2205.08815
                                         </a>
@@ -898,8 +904,8 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-4 order-first" align=center>
-                                    <a href=https://github.com/DR-algo>
+                                <div class="col-12 col-md-4 order-first research-figures" align=center>
+                                    <a class=order-2 href=https://github.com/DR-algo>
                                         <img class="img-light" src=assets/img/logo_DRalgo.svg height=relative width=60% alt="DRalgo" loading=lazy>
                                     </a>
                                 </div>
@@ -909,15 +915,15 @@
 
                     <div class="col-12 isotope-item js-id-GW">
                         <div class="col-lg-12 mb-5 view-showcase">
-                            <div class="row align-items-center">
+                            <div class="row align-items-center research-item">
                                 <div class="col-12 col-md-8">
-                                    <div class="section-subheading article-title mb-0 mt-0">
+                                    <div class="section-subheading article-title mb-0 mt-0 order-1">
                                         <a href=https://github.com/Wall-Go>
                                           How fast does the WallGo?
                                           A package for computing wall velocities in first-order phase transitions
                                         </a>
                                     </div>
-                                    <div class=article-style>
+                                    <div class="article-style order-3">
                                       WallGo is an open source code for the computation of the bubble wall velocity and bubble wall width
                                       in first-order cosmological phase transitions.
                                       The main WallGo Python package determines the wall velocity and
@@ -925,7 +931,7 @@
                                       the Boltzmann equations and energy-momentum conservation for
                                       the fluid velocity and temperature.
                                     </div>
-                                    <div class=btn-links>
+                                    <div class="btn-links order-last">
                                         <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2411.04970" target=_blank rel=noopener>
                                             2411.04970
                                         </a>
@@ -942,8 +948,8 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-4 order-first" align=center>
-                                    <a href=https://github.com/Wall-Go>
+                                <div class="col-12 col-md-4 order-first research-figures" align=center>
+                                    <a class=order-2 href=https://github.com/Wall-Go>
                                         <img class="img-light" src=assets/img/logo_wallgo.svg height=relative width=60% alt="WallGo" loading=lazy>
                                     </a>
                                 </div>
@@ -953,17 +959,17 @@
 
                      <div class="col-12 isotope-item js-id-cdm">
                         <div class="col-lg-12 mb-5 view-showcase">
-                            <div class="row align-items-center">
+                            <div class="row align-items-center research-item">
                                 <div class="col-12 col-md-8">
-                                    <div class="section-subheading article-title mb-0 mt-0">
+                                    <div class="section-subheading article-title mb-0 mt-0 order-1">
                                         <a href="#" onclick="return false">
                                           Cold dense matter and QCD pressure
                                         </a>
                                     </div>
-                                    <div class=article-style>
+                                    <div class="article-style order-3">
                                       Determining the physical phase of matter inside neutron stars has been a long standing challenge. The central object to inspect is the equation of state of neutron stars which by including astrophysical observations can be constrained tightly.
                                     </div>
-                                    <div class=btn-links>
+                                    <div class="btn-links order-last">
                                         <a class="btn btn-outline-primary btn-page-header" href=https://arxiv.org/abs/2204.11893  target=_blank rel=noopener>
                                             2204.11893
                                         </a>
@@ -975,8 +981,10 @@
                                           </a>                                                                              
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-4 order-first" align=center>
-                                    <img src=assets/img/figEOS.png height=relative width=90% alt="EOS of QCD matter" loading=lazy>
+                                <div class="col-12 col-md-4 order-first research-figures" align=center>
+                                    <div class=order-2>
+                                        <img src=assets/img/figEOS.png height=relative width=90% alt="EOS of QCD matter" loading=lazy>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1049,7 +1057,11 @@
               <li>
                 <i class="fa-li fas fa-envelope fa-2x" aria-hidden="true"></i>
                 <span id="person-email" itemprop="email"><a href="mailto:philipp.schicho@unige.ch">philipp.schicho[at]unige.ch</a></span>
-              </li>              
+              </li>
+              <li>
+                <i class="fa-li fas fa-graduation-cap fa-2x" aria-hidden="true"></i>
+                <span>Thesis projects: <a href="thesis/index.html">enquiry form for students</a></span>
+              </li>
             </ul>
           </div>
         </div>

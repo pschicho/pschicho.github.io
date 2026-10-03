@@ -16,6 +16,7 @@ imagesLoaded (research filter), MathJax 2 (LaTeX in INSPIRE titles).
 | --- | --- |
 | `index.html` | Homepage: about, experience, publications, group, research, teaching, talks, contact |
 | `talks/index.html` | Full talk list |
+| `thesis/index.html` | Thesis enquiry form for students (see below) |
 
 ## Content that lives in data files
 
@@ -38,6 +39,19 @@ touches the HTML. Each file documents its fields at the top.
 | `js/render.js` | Shared helpers (`window.Site`): HTML escaping, list-entry markup, file:// URL fix |
 | `js/site.js` | Navbar scrolling, scrollspy, Isotope research filter |
 | `js/mathjax-config.js` | MathJax settings; must load before MathJax |
+| `js/thesis-form.js` | Sends the thesis enquiry form to Web3Forms |
+
+## Thesis enquiry form
+
+`thesis/index.html` has no backend of its own: [Web3Forms](https://web3forms.com) emails
+each submission to the address its access key was created for. The key sits in the
+hidden `access_key` input and is public by design. Spam protection is deliberately
+light, with no CAPTCHA: the hidden `botcheck` honeypot catches bots that fill in every
+field, and Web3Forms runs its own spam filter. A bot that posts to the API directly
+with the public key gets through. If that becomes a problem, add Web3Forms' free
+hCaptcha (<https://docs.web3forms.com/getting-started/customizations/spam-protection/hcaptcha>)
+and make it mandatory in the [Web3Forms dashboard](https://app.web3forms.com), so it
+is checked on the server.
 
 ## Assets
 
