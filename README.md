@@ -61,6 +61,8 @@ is checked on the server.
   `npx svgo --multipass` and keep any embedded bitmaps at a sensible resolution.
   `universe.svg` and `universe-dark.svg` are generated from the TikZ source in
   `tools/universe/` by `python3 tools/make_universe.py`; edit the source, not the SVGs.
+  `hello.svg` and `hello-dark.svg` (the waving figure next to the greeting) are
+  generated with the TPC logos by `tools/make_logo.py` (see `assets/logo/README.md`).
 
 ## Local preview
 

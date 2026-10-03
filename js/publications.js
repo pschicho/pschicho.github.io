@@ -178,4 +178,40 @@ window.addEventListener('DOMContentLoaded', () => {
                 latestStatus.textContent = 'Could not load latest publication from INSPIRE.';
             });
     }
+
+    // Live figures under the section heading (<span data-inspire="papers|citations|h-index">):
+    // all INSPIRE records except the PhD thesis. On failure the numbers written
+    // in index.html stay.
+    const figures = document.querySelectorAll('[data-inspire]');
+    if (figures.length) {
+        const endpointAll = new URL('https://inspirehep.net/api/literature');
+        endpointAll.searchParams.set('q', BASE_QUERY);
+        endpointAll.searchParams.set('size', '250');
+        endpointAll.searchParams.set('fields', 'citation_count,document_type');
+
+        fetch(endpointAll.toString())
+            .then((response) => {
+                if (!response.ok) throw new Error(`INSPIRE request failed with status ${response.status}`);
+                return response.json();
+            })
+            .then((data) => {
+                const papers = ((data && data.hits && data.hits.hits) || [])
+                    .map((hit) => hit.metadata || {})
+                    .filter((metadata) => !(metadata.document_type || []).includes('thesis'));
+                if (!papers.length) throw new Error('No INSPIRE publications returned.');
+                const citations = papers
+                    .map((metadata) => Number(metadata.citation_count || 0))
+                    .sort((a, b) => b - a);
+                const values = {
+                    papers: papers.length,
+                    citations: citations.reduce((sum, count) => sum + count, 0),
+                    'h-index': citations.filter((count, i) => count >= i + 1).length,
+                };
+                figures.forEach((figure) => {
+                    const value = values[figure.dataset.inspire];
+                    if (value) figure.textContent = value.toLocaleString('en-US');
+                });
+            })
+            .catch(() => {});
+    }
 });

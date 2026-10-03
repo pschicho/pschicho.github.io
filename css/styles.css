@@ -3342,3 +3342,156 @@ html {
 .dark .thesis-callout .btn-primary {
     color: #fff;
 }
+
+/* About section (index.html #about) */
+.bio-greeting {
+    margin-top: 0;
+}
+
+.bio-lead {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    line-height: 1.55;
+}
+
+.bio-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 991.98px) {
+    .about-bio {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .bio-lead {
+        font-size: 1.1rem;
+    }
+}
+
+/* `.dark .btn-primary` resets the text colour to black */
+.dark .bio-actions .btn-primary {
+    color: #fff;
+}
+
+/* Philipp leaning on the greeting line (tools/make_logo.py): the bottom edge of
+   the image is the surface he leans on, so it sits on the text baseline */
+.bio-hello {
+    display: inline;
+    width: auto;
+    height: 1.45em;
+    margin-left: .3em;
+    vertical-align: baseline;
+}
+
+/* the light/dark swap, restated: a theme rule makes images in this column block-level */
+.bio-hello.logo-on-dark, .dark .bio-hello.logo-on-light {
+    display: none;
+}
+
+.dark .bio-hello.logo-on-dark {
+    display: inline;
+}
+
+.bio-label {
+    margin: 1.5rem 0 .5rem;
+    font-size: .8rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: #6c757d;
+}
+
+.bio-interests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.bio-interests li {
+    padding: .15rem .7rem;
+    border-radius: 999px;
+    font-size: .78rem;
+    background: rgba(21, 101, 192, .08);
+    color: #1f3a5f;
+}
+
+.dark .bio-label {
+    color: rgba(255, 255, 255, .6);
+}
+
+.dark .bio-interests li {
+    background: rgba(187, 222, 251, .1);
+    color: #dbe9f7;
+}
+
+/* Key figures under a section heading (publications: live from INSPIRE in
+   js/publications.js; talks: counted by js/talks.js) */
+.key-figures {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    gap: .6rem;
+    width: 100%;
+    max-width: 22rem;
+    margin: 1.25rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.key-figures a {
+    display: block;
+    height: 100%;
+    padding: .55rem .75rem;
+    border-radius: .375rem;
+    background: rgba(21, 101, 192, .07);
+    color: inherit;
+    text-decoration: none;
+}
+
+.key-figures a:hover {
+    background: rgba(21, 101, 192, .13);
+}
+
+.key-figure {
+    display: block;
+    font-family: 'Lora', serif;
+    font-size: 1.45rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1565c0;
+}
+
+.key-figure-label {
+    display: block;
+    font-size: .72rem;
+    line-height: 1.3;
+    color: #6c757d;
+}
+
+@media (max-width: 991.98px) {
+    .key-figures {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.dark .key-figures a {
+    background: rgba(187, 222, 251, .07);
+}
+
+.dark .key-figures a:hover {
+    background: rgba(187, 222, 251, .13);
+}
+
+.dark .key-figure {
+    color: #bbdefb;
+}
+
+.dark .key-figure-label {
+    color: rgba(255, 255, 255, .6);
+}

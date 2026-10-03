@@ -136,7 +136,7 @@
     <section id=about class="home-section wg-about-avatar">
       <div class=home-section-bg></div>
       <div class="container">
-        <div class="row" itemprop="author" itemscope itemtype="http://schema.org/Person" itemref="person-email">
+        <div class="row align-items-center" itemprop="author" itemscope itemtype="http://schema.org/Person" itemref="person-email">
           <div class="col-12 col-lg-4">
             <div id="profile">
               <div class=avatar-wrapper-parent>
@@ -149,6 +149,7 @@
               <div class="portrait-title">
                 <h2 itemprop="name">Philipp Schicho</h2>
                 <h3 itemprop="jobTitle">Research group leader</h3>
+                <h3>SNSF Ambizione fellow</h3>
                 <h3 itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
                   <a href="https://www.unige.ch/sciences/physique/theorique/en/" target="_blank" rel="noopener">
                     <span>D&eacute;partement de Physique Th&eacute;orique</span></a><br>
@@ -197,57 +198,36 @@
             </div>
           </div>
 
-          <div class="col-12 col-lg-8" itemprop="description">
-              <h1>Biography</h1>
-                <!-- <img src="assets/img/diags.pdf" alt="a few diagrams" style="width:50%"> -->
-            <p style=text-align:justify>
-              Hi everyone! 👋<br>
-              As a research group leader in theoretical physics,
-              I investigate quantum theories under extreme conditions,
-              probing the very dense and hot regimes found in compact star astrophysics and early universe cosmology.
-              A key part of my work involves developing automated methods for multi-loop calculations at finite temperature and density.
-        
-              <br><br>
-              Since autumn 2024,
-              I have been the principal investigator of PRECLISA:
-              <i>Gravitational waves from cosmological phase transitions: Precision cosmology in the light of LISA</i>
-              (<a href="https://www.snf.ch/en">SNSF</a> project
-               <a href="https://data.snf.ch/grants/grant/215997" target="blank" rel="noopener">no. 215997</a>).
-              Through this grant, funded by the Swiss National Science Foundation,
-              I lead the
-              <a href="#group" data-target="#group">
-                 Thermal field theory, Particles, and Cosmic phases (TPC)</a> group.
+          <div class="col-12 col-lg-8 about-bio" itemprop="description">
+            <h1 class="bio-greeting">Hi, I&rsquo;m Philipp<img class="bio-hello logo-on-light" src=assets/img/hello.svg alt="" width=128 height=100><img class="bio-hello logo-on-dark" src=assets/img/hello-dark.svg alt="" width=128 height=100></h1>
+            <p class="bio-lead">
+              I&rsquo;m a theoretical physicist at the University of Geneva.
+              I develop precision methods in thermal field theory to predict gravitational waves
+              from phase transitions in the early universe, so that a future measurement by
+              <a href="https://www.lisamission.org" target="_blank" rel="noopener">LISA</a>
+              can test physics beyond the Standard Model.
             </p>
-
-            <div class="row">
-              <div class="col-md-5">
-                <h3>Interests</h3>
-                <ul class="ul-interests">
-                  <li>Early universe cosmology</li>
-                  <li>Cosmological phase transitions</li>
-                  <li>Multi-loop computations</li>
-                </ul>
-              </div>
-              
-              <div class="col-md-7">
-                <h3>Education</h3>
-                <ul class="ul-edu fa-ul">
-                  <li>
-                    <i class="fa-li fas fa-graduation-cap"></i>
-                    <div class="description">
-                      <p class="course">PhD in high-energy physics, 2020</p>
-                      <p class="institution">University of Bern</p>
-                    </div>
-                  </li>
-                  <li>
-                    <i class="fa-li fas fa-graduation-cap"></i>
-                    <div class="description">
-                      <p class="course">MSc in Physics, 2016</p>
-                      <p class="institution">ETH Zürich</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+            <p class="bio-body">
+              Since 2024, I have led the
+              <a href="#group" data-target="#group">TPC group</a>,
+              funded by my SNSF Ambizione project
+              <a href="https://data.snf.ch/grants/grant/215997" target="_blank" rel="noopener">PRECLISA</a>.
+              I am also a core member of the LISA Cosmology Working Group.
+            </p>
+            <h3 class="bio-label">Research interests</h3>
+            <ul class="bio-interests">
+              <li>Gravitational waves</li>
+              <li>Cosmological phase transitions</li>
+              <li>Thermal field theory</li>
+              <li>Effective field theories</li>
+              <li>Multi-loop computations</li>
+              <li>Hot QCD and dense matter</li>
+            </ul>
+            <div class="bio-actions">
+              <a class="btn btn-primary" href="assets/doc/schicho_cv.pdf" target="_blank" rel="noopener">
+                <i class="fas fa-file-pdf me-2" aria-hidden="true"></i>CV
+              </a>
+              <a class="btn btn-outline-primary" href="thesis/index.html">Thesis projects</a>
             </div>
           </div>
         </div>
@@ -291,7 +271,7 @@
                         </div>
                         <div class="section-subheading card-title exp-company text-muted my-0">
                           <a href="https://www.unige.ch/sciences/physique/theorique/en/" target="_blank" rel="noopener">
-                            Départment de Physique Théorique, Université de Genève
+                            Département de Physique Théorique, Université de Genève
                           </a>
                         </div>
                         <div class="text-muted exp-meta">
@@ -553,7 +533,7 @@
                   <span class="badge rounded-pill border ">&nbsp;</span>
                 </div>
                 <div class="row h-50">
-                  <div class="col">&nbsp;</div>
+                  <div class="col border-end">&nbsp;</div>
                   <div class="col">&nbsp;</div>
                 </div>
               </div>
@@ -597,6 +577,56 @@
               </div>
             </div>
 
+            <div class="row experience">  
+              <div class="col-auto text-center flex-column d-none d-sm-flex">
+                <div class="row h-50">
+                  <div class="col border-end">&nbsp;</div>
+                  <div class="col">&nbsp;</div>
+                </div>
+                <div class="m-2">
+                  <span class="badge rounded-pill border ">&nbsp;</span>
+                </div>
+                <div class="row h-50">
+                  <div class="col">&nbsp;</div>
+                  <div class="col">&nbsp;</div>
+                </div>
+              </div>
+              
+              <div class="col py-2">
+                <div class="card">
+                  <div class=card-body>
+
+                    <div class="d-flex align-content-start">
+                      <div class="me-2 mb-2">
+                          <img class="img-light" src=assets/img/logo_tugraz.svg width=56px height=56px alt="TU Graz" loading=lazy>
+                      </div>
+                      <div>
+                        <div class="section-subheading card-title exp-title text-muted my-0">
+                          Bachelor of science, Physics
+                        </div>
+                        <div class="section-subheading card-title exp-company text-muted my-0">
+                          <a href="https://www.tugraz.at/en/" target="_blank" rel="noopener">
+                            Graz University of Technology (TU Graz)
+                          </a>
+                        </div>
+                        <div class="text-muted exp-meta">
+                          Sep 2011 –
+                          Aug 2014
+                          <span class=middot-divider></span>
+                          <span>Graz</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      With distinction; scholarship of excellence.<br>
+                      Advisors: Hans Gerd Evertz, Christian B. Lang<br>
+                      Thesis: &pi;- and &rho;-meson mass spectroscopy from lattice QCD.
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -609,6 +639,27 @@
         <div class="row">
           <div class="col-12 col-lg-4 section-heading">
             <h1>Publications</h1>
+            <!-- Filled in live from INSPIRE (js/publications.js); the numbers here are the fallback. -->
+            <ul class="key-figures">
+              <li>
+                <a href="https://inspirehep.net/authors/1639147" target="_blank" rel="noopener">
+                  <span class="key-figure" data-inspire="citations">1,700+</span>
+                  <span class="key-figure-label">citations</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://inspirehep.net/authors/1639147" target="_blank" rel="noopener">
+                  <span class="key-figure" data-inspire="h-index">20</span>
+                  <span class="key-figure-label">h-index</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://inspirehep.net/authors/1639147" target="_blank" rel="noopener">
+                  <span class="key-figure" data-inspire="papers">35</span>
+                  <span class="key-figure-label">publications</span>
+                </a>
+              </li>
+            </ul>
           </div>
           <div class="col-12 col-lg-8">
             <div class="publication-stack">
@@ -1024,6 +1075,21 @@
         <div class="row">
           <div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
             <h1 class=mb-0>Recent & Upcoming Talks</h1>
+            <!-- Counted from js/talks-data.js by js/talks.js; the numbers here are the fallback. -->
+            <ul class="key-figures">
+              <li>
+                <a href="talks/index.html">
+                  <span class="key-figure" data-talks-given="">72</span>
+                  <span class="key-figure-label">talks given</span>
+                </a>
+              </li>
+              <li>
+                <a href="talks/index.html">
+                  <span class="key-figure" data-talks-given="Conference,Workshop">12</span>
+                  <span class="key-figure-label">invited conference talks</span>
+                </a>
+              </li>
+            </ul>
           </div>
           <div class="col-12 col-lg-8"> 
 
