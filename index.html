@@ -77,11 +77,6 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#publications" data-target="#publications">
-                  <span>Publications</span>  
-                </a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link d-flex align-items-center" href="#group" data-target="#group">
                   <img class="nav-logo" src=assets/logo/tpc-logo.svg alt=""><span>TPC group</span>
                 </a>
@@ -92,13 +87,18 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#teaching" data-target="#teaching">
-                  <span>Teaching</span>
+                <a class="nav-link" href="#publications" data-target="#publications">
+                  <span>Publications</span>  
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="assets/doc/schicho_cv.pdf" data-target="assets/doc/schicho_cv.pdf" rel="noopener">
+                <a class="nav-link" href="#cv" data-target="#cv">
                   <span>CV</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#teaching" data-target="#teaching">
+                  <span>Teaching</span>
                 </a>
               </li>
               <li class="nav-item">
@@ -234,13 +234,468 @@
       </div>
     </section>
     
-    <!-- Experience-->
-    <section id=section-experience class="home-section wg-experience">
+    
+    
+
+     <!-- group -->
+    <section id=group class="home-section wg-portfolio">
+      <div class=home-section-bg></div>
+      <div class=container>
+          <div class="row justify-content-center">
+              <div class="section-heading col-12 mb-4 text-center">
+                  <h1 class=visually-hidden>Thermal field theory, Particles, and Cosmic phases group</h1>
+                  <figure class="group-logo mb-0" data-copyright="© 2025 Philipp Schicho" aria-hidden=true>
+                    <img class="logo-on-light" src=assets/logo/tpc-logo-horizontal-peek.svg alt="" loading=lazy>
+                    <img class="logo-on-dark" src=assets/logo/tpc-logo-horizontal-peek-dark.svg alt="" loading=lazy>
+                  </figure>
+              </div>
+              <div class="col-lg-12 mb-5 px-md-4 px-lg-5 view-showcase">
+                  <p style="text-align:justify">
+                    My research group investigates quantum theories under extreme conditions,
+                    exploring the dense and hot regimes that appear in compact star astrophysics and
+                    the early universe, while also seeking signs of new physics at the electroweak scale.
+                    Studying theories at finite temperature and density requires combining perturbative and non-perturbative methods to
+                    unravel their phase structure.
+                    Developing and applying this interplay of theoretical tools is at the heart of
+                    the Thermal field theory, Particles, and Cosmic phases group.
+                  </p>
+              </div>
+              <div class="col-lg-12 mb-5 px-md-4 px-lg-5 view-showcase">
+                  <div class="row">
+                      <div class="col-12 col-md-4">
+                          <div class="section-subheading article-title mb-0 mt-0">
+                               Group members 
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-8">
+                          <div id="group-members-root"></div>
+                          <div class="thesis-callout">
+                            <p class="mb-0">
+                              <strong>Interested in a Master's thesis in our group?</strong>
+                              Get in touch via the enquiry form.
+                              You can explore our current topics in the
+                              <a href="#research" data-target="#research">research overview</a>.
+                            </p>
+                            <a class="btn btn-primary" href="thesis/index.html">
+                              Thesis enquiry form<i class="fas fa-angle-right ms-2" aria-hidden="true"></i>
+                            </a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section> 
+    
+    <!-- Research -->
+    <section id=research class="home-section wg-portfolio">
+      <div class=home-section-bg></div>
+      <div class=container>
+          <div class="row justify-content-center">
+              <div class="section-heading col-12 mb-3 text-center">
+                  <h1 class=mb-0>
+                    Research projects
+                  </h1>
+              </div>
+              <div class=col-12>
+                <p style=text-align:justify>
+                    <!-- One key aspect that excites me about my research is to better understand quantum theories under extreme conditions probing very dense and hot regimes such as in compact star astrophysics and early universe cosmology -- also to unveil new physics at the electroweak scale. Theories at finite temperature and density require an interplay of perturbative and non-perturbative methods to access most sectors of their phase structure. It is exactly this dedicated combination of theoretical tools that I find most exciting. -->
+                </p>
+                <span class="d-none default-project-filter">*</span>
+                <div class=project-toolbar>
+                    <div class="project-filters research-filters">
+                        <a href=# data-filter=* class="research-filter active">
+                            <span class="research-filter-thumb research-filter-all">
+                                <img class="img-light img-keep-hue" src=assets/img/thumb_gw.svg alt="" loading=lazy>
+                                <img class="img-light img-keep-hue" src=assets/img/thumb_thermo.svg alt="" loading=lazy>
+                                <img class="img-light img-keep-hue" src=assets/img/thumb_bubble.svg alt="" loading=lazy>
+                                <img class="img-light img-keep-hue" src=assets/img/thumb_ns.svg alt="" loading=lazy>
+                            </span>
+                            <span class=research-filter-label>All</span>
+                        </a>
+                        <a href=# data-filter=.js-id-GW class=research-filter>
+                            <span class=research-filter-thumb><img class="img-light img-keep-hue" src=assets/img/thumb_gw.svg alt="" loading=lazy></span>
+                            <span class=research-filter-label>Gravitational waves</span>
+                        </a>
+                        <a href=# data-filter=.js-id-eq class=research-filter>
+                            <span class=research-filter-thumb><img class="img-light img-keep-hue" src=assets/img/thumb_thermo.svg alt="" loading=lazy></span>
+                            <span class=research-filter-label>Equilibrium microphysics</span>
+                        </a>
+                        <a href=# data-filter=.js-id-bubble class=research-filter>
+                            <span class=research-filter-thumb><img class="img-light img-keep-hue" src=assets/img/thumb_bubble.svg alt="" loading=lazy></span>
+                            <span class=research-filter-label>Bubble dynamics</span>
+                        </a>
+                        <a href=# data-filter=.js-id-ns class=research-filter>
+                            <span class=research-filter-thumb><img class="img-light img-keep-hue" src=assets/img/thumb_ns.svg alt="" loading=lazy></span>
+                            <span class=research-filter-label>Neutron stars</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="isotope projects-container row js-layout-row project-showcase">
+
+                     <div class="col-12 isotope-item js-id-GW js-id-eq">
+                        <div class="col-lg-12 mb-5 view-showcase">
+                            <div class="row align-items-center research-item">
+                                <div class="col-12 col-md-8">
+                                    <div class="section-subheading article-title mb-0 mt-0 order-1">
+                                        <a href="#" onclick="return false">
+                                          Precision thermodynamics for cosmological phase transitions
+                                        </a>
+                                    </div>
+                                    <div class="article-style order-3">
+                                      Understanding the connection between the matter content of the universe and its thermal history is a major challenge in cosmology.
+                                      The detection of gravitational waves (GW) from binary black hole mergers at <a href="https://www.ligo.caltech.edu" target=_blank rel=noopener>LIGO</a> has invigorated efforts to scope the universe in a broad temperature range and answer the question:
+                                      is there new physics at the electroweak scale?
+
+                                      The electroweak phase transition (EWPT) in beyond the Standard Model (BSM) theories could be
+                                      strongly first order, possibly via complex multi-step transitions,
+                                      and thereby explain baryogenesis and in turn the baryon asymmetry of the universe.
+                                    </div>
+                                    <div class="article-style order-5">
+                                      Such a transition would also source a stochastic GW background that propagates
+                                      freely to us from the early universe (cf. top figure).
+                                      Its signal is expected in the millihertz band of the
+                                      <a href="https://www.lisamission.org" target=_blank rel=noopener>Laser Interferometer Space Antenna (LISA)</a>,
+                                      a space-based detector of three spacecraft trailing the Earth around the Sun (cf. animation)
+                                      that ESA plans to launch in 2035.
+                                      Turning such a measurement into a statement about particle physics
+                                      requires precise predictions of the phase transition thermodynamics.
+                                    </div>
+                                    <div class="btn-links order-last">
+                                        <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2009.10080" target=_blank rel=noopener>
+                                            2009.10080
+                                        </a>
+                                        <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2112.05472" target=_blank rel=noopener>
+                                            2112.05472
+                                        </a>
+                                        <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2405.18349" target=_blank rel=noopener>
+                                            2405.18349
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 order-first research-figures" align=center>
+                                    <!-- <img class="img-light"
+                                      src=assets/img/contour.svg
+                                      height=relative width=80% alt="two step phase transition" loading=lazy> -->
+                                    <figure class=order-2
+                                      data-copyright="© 2025 Philipp Schicho"
+                                      data-sources="Parts adapted from https://kurzgesagt.org, 2023">
+                                        <img class="logo-on-light"
+                                          src=assets/img/universe.svg
+                                          height=relative width=80% alt="early universe phase transition" loading=lazy>
+                                        <img class="logo-on-dark"
+                                          src=assets/img/universe-dark.svg
+                                          height=relative width=80% alt="early universe phase transition" loading=lazy>
+                                    </figure>
+                                    <figure class=order-4
+                                      data-copyright="© Anna Kormu"
+                                      data-sources="https://blogs.helsinki.fi/koranna/visualisations/">
+                                        <video src="https://blogs.helsinki.fi/koranna/files/2021/08/lisa_gw_blue.mp4"
+                                          style="width:80%;aspect-ratio:16/9" autoplay muted loop playsinline
+                                          aria-label="LISA orbiting the Sun as gravitational waves pass"></video>
+                                        <figcaption>
+                                          LISA visualization by
+                                          <a href="https://blogs.helsinki.fi/koranna/visualisations/" target=_blank rel=noopener>Anna Kormu</a>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                   
+
+
+
+                    <div class="col-12 isotope-item js-id-GW js-id-eq">
+                        <div class="col-lg-12 mb-5 view-showcase">
+                            <div class="row align-items-center research-item">
+                                <div class="col-12 col-md-8">
+                                    <div class="section-subheading article-title mb-0 mt-0 order-1">
+                                        <a href=https://github.com/DR-algo>
+                                          DRalgo: automated 3d EFT framework for thermal field theories
+                                        </a>
+                                    </div>
+                                    <div class="article-style order-3">
+                                      DRalgo is an algorithmic implementation that constructs an effective high-temperature theory for generic models.
+                                      The Mathematica package automates the matching of 4d thermal field theories to their 3d EFTs at next-to-leading order
+                                      and, since its latest update, of higher-dimensional operators at one loop.
+                                    </div>
+                                    <div class="btn-links order-last">
+                                        <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2205.08815" target=_blank rel=noopener>
+                                            2205.08815
+                                        </a>
+                                        <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2605.15176" target=_blank rel=noopener>
+                                            2605.15176
+                                        </a>
+                                        <a class="btn btn-outline-primary btn-page-header" href=https://github.com/DR-algo target=_blank rel=noopener>
+                                            <i class="fab fa-github me-1"></i>
+                                            Follow
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 order-first research-figures" align=center>
+                                    <a class=order-2 href=https://github.com/DR-algo>
+                                        <img class="img-light" src=assets/img/logo_DRalgo.svg height=relative width=60% alt="DRalgo" loading=lazy>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 isotope-item js-id-GW js-id-bubble">
+                        <div class="col-lg-12 mb-5 view-showcase">
+                            <div class="row align-items-center research-item">
+                                <div class="col-12 col-md-8">
+                                    <div class="section-subheading article-title mb-0 mt-0 order-1">
+                                        <a href=https://github.com/Wall-Go>
+                                          How fast does the WallGo?
+                                          A package for computing wall velocities in first-order phase transitions
+                                        </a>
+                                    </div>
+                                    <div class="article-style order-3">
+                                      WallGo is an open source code for the computation of the bubble wall velocity and bubble wall width
+                                      in first-order cosmological phase transitions.
+                                      The main WallGo Python package determines the wall velocity and
+                                      width by solving the scalar field(s) equation of motion,
+                                      the Boltzmann equations and energy-momentum conservation for
+                                      the fluid velocity and temperature.
+                                    </div>
+                                    <div class="btn-links order-last">
+                                        <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2411.04970" target=_blank rel=noopener>
+                                            2411.04970
+                                        </a>
+                                        <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2510.27691" target=_blank rel=noopener>
+                                            2510.27691
+                                        </a>
+                                        <a class="btn btn-outline-primary btn-page-header" href=https://github.com/Wall-Go target=_blank rel=noopener>
+                                            <i class="fab fa-github me-1"></i>
+                                            Follow
+                                        </a>
+                                        <a class="btn btn-outline-primary btn-page-header" href=https://wallgo.readthedocs.io target=_blank rel=noopener>
+                                            <i class="fas fa-book me-1"></i>
+                                            Docs
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 order-first research-figures" align=center>
+                                    <a class=order-2 href=https://github.com/Wall-Go>
+                                        <img class="img-light img-keep-hue" src=assets/img/logo_wallgo.svg height=relative width=60% alt="WallGo" loading=lazy>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="col-12 isotope-item js-id-ns">
+                        <div class="col-lg-12 mb-5 view-showcase">
+                            <div class="row align-items-center research-item">
+                                <div class="col-12 col-md-8">
+                                    <div class="section-subheading article-title mb-0 mt-0 order-1">
+                                        <a href="#" onclick="return false">
+                                          Cold dense matter and QCD pressure
+                                        </a>
+                                    </div>
+                                    <div class="article-style order-3">
+                                      Determining the physical phase of matter inside neutron stars has been a long standing challenge. The central object to inspect is the equation of state of neutron stars which by including astrophysical observations can be constrained tightly.
+                                    </div>
+                                    <div class="btn-links order-last">
+                                        <a class="btn btn-outline-primary btn-page-header" href=https://arxiv.org/abs/2204.11893  target=_blank rel=noopener>
+                                            2204.11893
+                                        </a>
+                                        <a class="btn btn-outline-primary btn-page-header" href=https://arxiv.org/abs/2204.11279  target=_blank rel=noopener>
+                                            2204.11279
+                                        </a>
+                                         <a class="btn btn-outline-primary btn-page-header" href=https://arxiv.org/abs/2304.05427  target=_blank rel=noopener>
+                                             2304.05427
+                                          </a>                                                                              
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 order-first research-figures" align=center>
+                                    <div class=order-2>
+                                        <img src=assets/img/figEOS.png height=relative width=90% alt="EOS of QCD matter" loading=lazy>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                   
+
+
+
+                </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+
+    <!-- Publications -->
+    <section id="publications" class="home-section wg-collection">
       <div class=home-section-bg></div>
       <div class="container">
         <div class="row">
-          <div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
-            <h1 class=mb-0>Experience</h1>
+          <div class="col-12 col-lg-4 section-heading">
+            <h1>Publications</h1>
+            <!-- Filled in live from INSPIRE (js/publications.js); the numbers here are the fallback. -->
+            <ul class="key-figures">
+              <li>
+                <a href="https://inspirehep.net/authors/1639147" target="_blank" rel="noopener">
+                  <span class="key-figure" data-inspire="citations">1,700+</span>
+                  <span class="key-figure-label">citations</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://inspirehep.net/authors/1639147" target="_blank" rel="noopener">
+                  <span class="key-figure" data-inspire="h-index">20</span>
+                  <span class="key-figure-label">h-index</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://inspirehep.net/authors/1639147" target="_blank" rel="noopener">
+                  <span class="key-figure" data-inspire="papers">35</span>
+                  <span class="key-figure-label">publications</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-8">
+            <div class="publication-stack">
+              <div class="publication-panel publication-panel-live">
+                <div class="publication-panel-header">
+                  <div>
+                    <h2 class="publication-subheading">Latest publication</h2>
+                  </div>
+                </div>
+                <div id="inspire-latest-status" class="publication-status">Loading latest publication from INSPIRE...</div>
+                <ol id="inspire-latest-list" class="publication-live-list" hidden></ol>
+              </div>
+
+              <div class="publication-panel publication-panel-live">
+                <div class="publication-panel-header">
+                  <div>
+                    <h2 class="publication-subheading">Top 5 most cited on INSPIRE</h2>
+                  </div>
+                </div>
+                <div id="inspire-publications-status" class="publication-status">Loading publications from INSPIRE...</div>
+                <ol id="inspire-publications-list" class="publication-live-list" hidden></ol>
+              </div>
+
+              <div class="publication-panel publication-panel-static">
+                <div class="publication-panel-header publication-panel-header-static">
+                  <div>
+                    <h2 class="publication-subheading">Current hand-picked selection</h2>
+                  </div>
+                </div>
+                <ul class="fa-ul mb-0 publication-static-list">
+                  <li>
+                      <span class="fa-li">
+                        <i class="fas fa-book-open text-warning">
+                        </i>
+                      </span>
+                      J. Löfgren, M. J. Ramsey-Musolf, P. Schicho, and T. V. I. Tenkanen,
+                      Nucleation at Finite Temperature: A Gauge-Invariant Perturbative Framework,
+                      <a href="https://dx.doi.org/10.1103/PhysRevLett.130.251801" target="_blank" rel="noopener">
+                        Phys. Rev. Lett. 130, 251801</a>
+                      (2023),
+                      <a href="https://arxiv.org/abs/2112.05472"> [2112.05472]</a>.
+                  </li>
+                  <li>
+                      <span class="fa-li">
+                        <i class="fas fa-book-open text-warning">
+                        </i>
+                      </span>
+                      A. Ekstedt, P. Schicho, and T. V. I. Tenkanen,
+                      DRalgo: A package for effective field theory approach for thermal phase transitions,
+                      <a href="https://dx.doi.org/10.1016/j.cpc.2023.108725" target="_blank" rel="noopener">
+                        Comput. Phys. Commun. 288, 108725</a>
+                      (2023),
+                      <a href="https://arxiv.org/abs/2205.08815"> [2205.08815]</a>.
+                  </li>
+    <!--               <li>
+                      <span class="fa-li">
+                        <i class="fas fa-book-open text-warning">
+                        </i>
+                      </span>
+                      J. Hirvonen, J. Löfgren, M. J. Ramsey-Musolf, P. Schicho, and T. V. I. Tenkanen,
+                      Computing the gauge-invariant bubble nucleation rate in finite temperature effective field theory,
+                      <a href="https://dx.doi.org/10.1007/JHEP07(2022)135"> JHEP 2022, 135</a>
+                      (2022),
+                      <a href="https://arxiv.org/abs/2112.08912"> [2112.08912]</a>.
+                  </li> -->
+                  <li>
+                      <span class="fa-li">
+                        <i class="fas fa-book-open text-warning">
+                        </i>
+                      </span>
+                      A. Ekstedt, P. Schicho, and T. V. I. Tenkanen,
+                      Cosmological phase transitions at three loops: The final verdict on perturbation theory,
+                      <a href="https://dx.doi.org/10.1103/PhysRevD.110.096006" target="_blank" rel="noopener">
+                        Phys. Rev. D 110, 096006</a>
+                      (2024),
+                      <a href="https://arxiv.org/abs/2405.18349"> [2405.18349]</a>.
+                  </li>
+                  <!-- <li>
+                      <span class="fa-li">
+                        <i class="fas fa-book-open text-warning">
+                        </i>
+                      </span>
+                      L. Niemi, P. Schicho, and T. V. I. Tenkanen,
+                      Singlet-assisted electroweak phase transition at two loops,
+                      <a href="https://dx.doi.org/10.1103/PhysRevD.103.115035" target="_blank" rel="noopener">
+                        Phys. Rev. D 103, 115035</a>
+                      (2021),
+                      <a href="https://arxiv.org/abs/2103.07467"> [2103.07467]</a>.
+                  </li> -->
+                  <li>
+                      <span class="fa-li">
+                        <i class="fas fa-book-open text-warning">
+                        </i>
+                      </span>
+                      D. Croon, O. Gould, P. Schicho, T. V. I. Tenkanen, and G. White,
+                      Theoretical uncertainties for cosmological first-order phase transitions,
+                      <a href="https://dx.doi.org/10.1007/JHEP04(2021)055" target="_blank" rel="noopener">
+                        JHEP 2021, 55</a>
+                      (2021),
+                      <a href="https://arxiv.org/abs/2009.10080"> [2009.10080]</a>.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="see-all">
+              <a href="assets/doc/schicho_output.pdf">
+                See all publications
+              </a>&nbsp;
+              <a href="https://inspirehep.net/authors/1639147">
+                <i class="ai ai-inspire fa-2x"></i>
+              </a>
+            </div>         
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CV: experience timeline and the pdf CV -->
+    <section id=cv class="home-section wg-experience">
+      <div class=home-section-bg></div>
+      <div class="container">
+        <div class="row">
+          <div class="section-heading col-12 col-lg-4 mb-4 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
+            <h1 class=mb-3>CV</h1>
+            <div class=cv-intro>
+              <p>
+                I lead the Thermal field theory, Particles, and Cosmic phases (TPC) group
+                at the Université de Genève as an SNSF Ambizione fellow.
+                Before that, I was a postdoctoral researcher at Goethe University Frankfurt
+                and at the University of Helsinki, after a PhD at the University of Bern,
+                studies at ETH Zurich and TU Graz, and two stays at CERN.
+              </p>
+              <p>
+                My full CV also lists my funding, publications, talks, teaching,
+                and the conferences I organized.
+              </p>
+              <a class="btn btn-primary" href="assets/doc/schicho_cv.pdf" target="_blank" rel="noopener">
+                <i class="fas fa-file-pdf me-2" aria-hidden="true"></i>Full CV (PDF)
+              </a>
+            </div>
           </div>
           <div class="col-12 col-lg-8">
              <div class="row experience"> 
@@ -467,7 +922,7 @@
                       </div>
                     </div>
                     <div class="card-text">
-                      Theoretical optimisation of slow extraction.<br>
+                      Theoretical optimization of slow extraction.<br>
                       Advisors: Matthew A. Fraser, Malika Meddahi
                     </div>                        
                   </div>
@@ -516,7 +971,7 @@
                       </div>
                     </div>
                     <div class="card-text">
-                      Optimising simulation times of SPS slow extraction using MAD-X.
+                      Optimizing simulation times of SPS slow extraction using MAD-X.
                     </div>  
                   </div>
                 </div>
@@ -629,423 +1084,6 @@
 
           </div>
         </div>
-      </div>
-    </section>
-    
-    <!-- Publications -->
-    <section id="publications" class="home-section wg-collection">
-      <div class=home-section-bg></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-lg-4 section-heading">
-            <h1>Publications</h1>
-            <!-- Filled in live from INSPIRE (js/publications.js); the numbers here are the fallback. -->
-            <ul class="key-figures">
-              <li>
-                <a href="https://inspirehep.net/authors/1639147" target="_blank" rel="noopener">
-                  <span class="key-figure" data-inspire="citations">1,700+</span>
-                  <span class="key-figure-label">citations</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://inspirehep.net/authors/1639147" target="_blank" rel="noopener">
-                  <span class="key-figure" data-inspire="h-index">20</span>
-                  <span class="key-figure-label">h-index</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://inspirehep.net/authors/1639147" target="_blank" rel="noopener">
-                  <span class="key-figure" data-inspire="papers">35</span>
-                  <span class="key-figure-label">publications</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-12 col-lg-8">
-            <div class="publication-stack">
-              <div class="publication-panel publication-panel-live">
-                <div class="publication-panel-header">
-                  <div>
-                    <h2 class="publication-subheading">Latest publication</h2>
-                  </div>
-                </div>
-                <div id="inspire-latest-status" class="publication-status">Loading latest publication from INSPIRE...</div>
-                <ol id="inspire-latest-list" class="publication-live-list" hidden></ol>
-              </div>
-
-              <div class="publication-panel publication-panel-live">
-                <div class="publication-panel-header">
-                  <div>
-                    <h2 class="publication-subheading">Top 5 most cited on INSPIRE</h2>
-                  </div>
-                </div>
-                <div id="inspire-publications-status" class="publication-status">Loading publications from INSPIRE...</div>
-                <ol id="inspire-publications-list" class="publication-live-list" hidden></ol>
-              </div>
-
-              <div class="publication-panel publication-panel-static">
-                <div class="publication-panel-header publication-panel-header-static">
-                  <div>
-                    <h2 class="publication-subheading">Current hand-picked selection</h2>
-                  </div>
-                </div>
-                <ul class="fa-ul mb-0 publication-static-list">
-                  <li>
-                      <span class="fa-li">
-                        <i class="fas fa-book-open text-warning">
-                        </i>
-                      </span>
-                      J. Löfgren, M. J. Ramsey-Musolf, P. Schicho, and T. V. I. Tenkanen,
-                      Nucleation at Finite Temperature: A Gauge-Invariant Perturbative Framework,
-                      <a href="https://dx.doi.org/10.1103/PhysRevLett.130.251801" target="_blank" rel="noopener">
-                        Phys. Rev. Lett. 130, 251801</a>
-                      (2023),
-                      <a href="https://arxiv.org/abs/2112.05472"> [2112.05472]</a>.
-                  </li>
-                  <li>
-                      <span class="fa-li">
-                        <i class="fas fa-book-open text-warning">
-                        </i>
-                      </span>
-                      A. Ekstedt, P. Schicho, and T. V. I. Tenkanen,
-                      DRalgo: A package for effective field theory approach for thermal phase transitions,
-                      <a href="https://dx.doi.org/10.1016/j.cpc.2023.108725" target="_blank" rel="noopener">
-                        Comput. Phys. Commun. 288, 108725</a>
-                      (2023),
-                      <a href="https://arxiv.org/abs/2205.08815"> [2205.08815]</a>.
-                  </li>
-    <!--               <li>
-                      <span class="fa-li">
-                        <i class="fas fa-book-open text-warning">
-                        </i>
-                      </span>
-                      J. Hirvonen, J. Löfgren, M. J. Ramsey-Musolf, P. Schicho, and T. V. I. Tenkanen,
-                      Computing the gauge-invariant bubble nucleation rate in finite temperature effective field theory,
-                      <a href="https://dx.doi.org/10.1007/JHEP07(2022)135"> JHEP 2022, 135</a>
-                      (2022),
-                      <a href="https://arxiv.org/abs/2112.08912"> [2112.08912]</a>.
-                  </li> -->
-                  <li>
-                      <span class="fa-li">
-                        <i class="fas fa-book-open text-warning">
-                        </i>
-                      </span>
-                      A. Ekstedt, P. Schicho, and T. V. I. Tenkanen,
-                      Cosmological phase transitions at three loops: The final verdict on perturbation theory,
-                      <a href="https://dx.doi.org/10.1103/PhysRevD.110.096006" target="_blank" rel="noopener">
-                        Phys. Rev. D 110, 096006</a>
-                      (2024),
-                      <a href="https://arxiv.org/abs/2405.18349"> [2405.18349]</a>.
-                  </li>
-                  <!-- <li>
-                      <span class="fa-li">
-                        <i class="fas fa-book-open text-warning">
-                        </i>
-                      </span>
-                      L. Niemi, P. Schicho, and T. V. I. Tenkanen,
-                      Singlet-assisted electroweak phase transition at two loops,
-                      <a href="https://dx.doi.org/10.1103/PhysRevD.103.115035" target="_blank" rel="noopener">
-                        Phys. Rev. D 103, 115035</a>
-                      (2021),
-                      <a href="https://arxiv.org/abs/2103.07467"> [2103.07467]</a>.
-                  </li> -->
-                  <li>
-                      <span class="fa-li">
-                        <i class="fas fa-book-open text-warning">
-                        </i>
-                      </span>
-                      D. Croon, O. Gould, P. Schicho, T. V. I. Tenkanen, and G. White,
-                      Theoretical uncertainties for cosmological first-order phase transitions,
-                      <a href="https://dx.doi.org/10.1007/JHEP04(2021)055" target="_blank" rel="noopener">
-                        JHEP 2021, 55</a>
-                      (2021),
-                      <a href="https://arxiv.org/abs/2009.10080"> [2009.10080]</a>.
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="see-all">
-              <a href="assets/doc/schicho_output.pdf">
-                See all publications
-              </a>&nbsp;
-              <a href="https://inspirehep.net/authors/1639147">
-                <i class="ai ai-inspire fa-2x"></i>
-              </a>
-            </div>         
-          </div>
-        </div>
-      </div>
-    </section>
-    
-
-     <!-- group -->
-    <section id=group class="home-section wg-portfolio">
-      <div class=home-section-bg></div>
-      <div class=container>
-          <div class="row justify-content-center">
-              <div class="section-heading col-12 mb-4 text-center">
-                  <h1 class=visually-hidden>Thermal field theory, Particles, and Cosmic phases group</h1>
-                  <figure class="group-logo mb-0" data-copyright="© 2025 Philipp Schicho" aria-hidden=true>
-                    <img class="logo-on-light" src=assets/logo/tpc-logo-horizontal-peek.svg alt="" loading=lazy>
-                    <img class="logo-on-dark" src=assets/logo/tpc-logo-horizontal-peek-dark.svg alt="" loading=lazy>
-                  </figure>
-              </div>
-              <div class="col-lg-12 mb-5 px-md-4 px-lg-5 view-showcase">
-                  <p style="text-align:justify">
-                    My research group investigates quantum theories under extreme conditions,
-                    exploring the dense and hot regimes that appear in compact star astrophysics and
-                    the early universe, while also seeking signs of new physics at the electroweak scale.
-                    Studying theories at finite temperature and density requires combining perturbative and non-perturbative methods to
-                    unravel their phase structure.
-                    Developing and applying this interplay of theoretical tools is at the heart of
-                    the Thermal field theory, Particles, and Cosmic phases group.
-                  </p>
-              </div>
-              <div class="col-lg-12 mb-5 px-md-4 px-lg-5 view-showcase">
-                  <div class="row">
-                      <div class="col-12 col-md-4">
-                          <div class="section-subheading article-title mb-0 mt-0">
-                               Group members 
-                          </div>
-                      </div>
-                      <div class="col-12 col-md-8">
-                          <div id="group-members-root"></div>
-                          <div class="thesis-callout">
-                            <p class="mb-0">
-                              <strong>Interested in a Master's thesis in our group?</strong>
-                              Get in touch via the enquiry form.
-                              You can explore our current topics in the
-                              <a href="#research" data-target="#research">research overview</a>.
-                            </p>
-                            <a class="btn btn-primary" href="thesis/index.html">
-                              Thesis enquiry form<i class="fas fa-angle-right ms-2" aria-hidden="true"></i>
-                            </a>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-    </section> 
-    
-    <!-- Research -->
-    <section id=research class="home-section wg-portfolio">
-      <div class=home-section-bg></div>
-      <div class=container>
-          <div class="row justify-content-center">
-              <div class="section-heading col-12 mb-3 text-center">
-                  <h1 class=mb-0>
-                    Research projects
-                  </h1>
-              </div>
-              <div class=col-12>
-                <p style=text-align:justify>
-                    <!-- One key aspect that excites me about my research is to better understand quantum theories under extreme conditions probing very dense and hot regimes such as in compact star astrophysics and early universe cosmology -- also to unveil new physics at the electroweak scale. Theories at finite temperature and density require an interplay of perturbative and non-perturbative methods to access most sectors of their phase structure. It is exactly this dedicated combination of theoretical tools that I find most exciting. -->
-                </p>
-                <span class="d-none default-project-filter">*</span>
-                <div class=project-toolbar>
-                    <div class=project-filters>
-                        <div class="btn-toolbar d-flex justify-content-center">
-                            <div class="btn-group flex-wrap">
-                                <a href=# data-filter=* class="btn btn-primary btn-lg active">All</a>
-                                <a href=# data-filter=.js-id-GW class="btn btn-primary btn-lg">GWs</a>
-                                <a href=# data-filter=.js-id-cdm class="btn btn-primary btn-lg">Cold dense matter</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="isotope projects-container row js-layout-row project-showcase">
-
-                     <div class="col-12 isotope-item js-id-GW">
-                        <div class="col-lg-12 mb-5 view-showcase">
-                            <div class="row align-items-center research-item">
-                                <div class="col-12 col-md-8">
-                                    <div class="section-subheading article-title mb-0 mt-0 order-1">
-                                        <a href="#" onclick="return false">
-                                          Precision thermodynamics for cosmological phase transitions
-                                        </a>
-                                    </div>
-                                    <div class="article-style order-3">
-                                      Understanding the connection between the matter content of the universe and its thermal history is a major challenge in cosmology.
-                                      The detection of gravitational waves (GW) from binary black hole mergers at <a href="https://www.ligo.caltech.edu" target=_blank rel=noopener>LIGO</a> has invigorated efforts to scope the universe in a broad temperature range and answer the question:
-                                      is there new physics at the electroweak scale?
-
-                                      The electroweak phase transition (EWPT) in beyond the Standard Model (BSM) theories could be
-                                      strongly first order, possibly via complex multi-step transitions,
-                                      and thereby explain baryogenesis and in turn the baryon asymmetry of the universe.
-                                    </div>
-                                    <div class="article-style order-5">
-                                      Such a transition would also source a stochastic GW background that propagates
-                                      freely to us from the early universe (cf. top figure).
-                                      Its signal is expected in the millihertz band of the
-                                      <a href="https://www.lisamission.org" target=_blank rel=noopener>Laser Interferometer Space Antenna (LISA)</a>,
-                                      a space-based detector of three spacecraft trailing the Earth around the Sun (cf. animation)
-                                      that ESA plans to launch in 2035.
-                                      Turning such a measurement into a statement about particle physics
-                                      requires precise predictions of the phase transition thermodynamics.
-                                    </div>
-                                    <div class="btn-links order-last">
-                                        <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2009.10080" target=_blank rel=noopener>
-                                            2009.10080
-                                        </a>
-                                        <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2112.05472" target=_blank rel=noopener>
-                                            2112.05472
-                                        </a>
-                                        <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2405.18349" target=_blank rel=noopener>
-                                            2405.18349
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-4 order-first research-figures" align=center>
-                                    <!-- <img class="img-light"
-                                      src=assets/img/contour.svg
-                                      height=relative width=80% alt="two step phase transition" loading=lazy> -->
-                                    <figure class=order-2
-                                      data-copyright="© 2025 Philipp Schicho"
-                                      data-sources="Parts adapted from https://kurzgesagt.org, 2023">
-                                        <img class="logo-on-light"
-                                          src=assets/img/universe.svg
-                                          height=relative width=80% alt="early universe phase transition" loading=lazy>
-                                        <img class="logo-on-dark"
-                                          src=assets/img/universe-dark.svg
-                                          height=relative width=80% alt="early universe phase transition" loading=lazy>
-                                    </figure>
-                                    <figure class=order-4
-                                      data-copyright="© Anna Kormu"
-                                      data-sources="https://blogs.helsinki.fi/koranna/visualisations/">
-                                        <video src="https://blogs.helsinki.fi/koranna/files/2021/08/lisa_gw_blue.mp4"
-                                          style="width:80%;aspect-ratio:16/9" autoplay muted loop playsinline
-                                          aria-label="LISA orbiting the Sun as gravitational waves pass"></video>
-                                        <figcaption>
-                                          LISA visualisation by
-                                          <a href="https://blogs.helsinki.fi/koranna/visualisations/" target=_blank rel=noopener>Anna Kormu</a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>                   
-
-
-
-                    <div class="col-12 isotope-item js-id-GW">
-                        <div class="col-lg-12 mb-5 view-showcase">
-                            <div class="row align-items-center research-item">
-                                <div class="col-12 col-md-8">
-                                    <div class="section-subheading article-title mb-0 mt-0 order-1">
-                                        <a href=https://github.com/DR-algo>
-                                          DRalgo: automated 3d EFT framework for thermal field theories
-                                        </a>
-                                    </div>
-                                    <div class="article-style order-3">
-                                      DRalgo is an algorithmic implementation that constructs an effective high-temperature theory for generic models.
-                                      The Mathematica package automates the matching of 4d thermal field theories to their 3d EFTs at next-to-leading order
-                                      and, since its latest update, of higher-dimensional operators at one loop.
-                                    </div>
-                                    <div class="btn-links order-last">
-                                        <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2205.08815" target=_blank rel=noopener>
-                                            2205.08815
-                                        </a>
-                                        <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2605.15176" target=_blank rel=noopener>
-                                            2605.15176
-                                        </a>
-                                        <a class="btn btn-outline-primary btn-page-header" href=https://github.com/DR-algo target=_blank rel=noopener>
-                                            <i class="fab fa-github me-1"></i>
-                                            Follow
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-4 order-first research-figures" align=center>
-                                    <a class=order-2 href=https://github.com/DR-algo>
-                                        <img class="img-light" src=assets/img/logo_DRalgo.svg height=relative width=60% alt="DRalgo" loading=lazy>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 isotope-item js-id-GW">
-                        <div class="col-lg-12 mb-5 view-showcase">
-                            <div class="row align-items-center research-item">
-                                <div class="col-12 col-md-8">
-                                    <div class="section-subheading article-title mb-0 mt-0 order-1">
-                                        <a href=https://github.com/Wall-Go>
-                                          How fast does the WallGo?
-                                          A package for computing wall velocities in first-order phase transitions
-                                        </a>
-                                    </div>
-                                    <div class="article-style order-3">
-                                      WallGo is an open source code for the computation of the bubble wall velocity and bubble wall width
-                                      in first-order cosmological phase transitions.
-                                      The main WallGo Python package determines the wall velocity and
-                                      width by solving the scalar field(s) equation of motion,
-                                      the Boltzmann equations and energy-momentum conservation for
-                                      the fluid velocity and temperature.
-                                    </div>
-                                    <div class="btn-links order-last">
-                                        <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2411.04970" target=_blank rel=noopener>
-                                            2411.04970
-                                        </a>
-                                        <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/abs/2510.27691" target=_blank rel=noopener>
-                                            2510.27691
-                                        </a>
-                                        <a class="btn btn-outline-primary btn-page-header" href=https://github.com/Wall-Go target=_blank rel=noopener>
-                                            <i class="fab fa-github me-1"></i>
-                                            Follow
-                                        </a>
-                                        <a class="btn btn-outline-primary btn-page-header" href=https://wallgo.readthedocs.io target=_blank rel=noopener>
-                                            <i class="fas fa-book me-1"></i>
-                                            Docs
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-4 order-first research-figures" align=center>
-                                    <a class=order-2 href=https://github.com/Wall-Go>
-                                        <img class="img-light img-keep-hue" src=assets/img/logo_wallgo.svg height=relative width=60% alt="WallGo" loading=lazy>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                     <div class="col-12 isotope-item js-id-cdm">
-                        <div class="col-lg-12 mb-5 view-showcase">
-                            <div class="row align-items-center research-item">
-                                <div class="col-12 col-md-8">
-                                    <div class="section-subheading article-title mb-0 mt-0 order-1">
-                                        <a href="#" onclick="return false">
-                                          Cold dense matter and QCD pressure
-                                        </a>
-                                    </div>
-                                    <div class="article-style order-3">
-                                      Determining the physical phase of matter inside neutron stars has been a long standing challenge. The central object to inspect is the equation of state of neutron stars which by including astrophysical observations can be constrained tightly.
-                                    </div>
-                                    <div class="btn-links order-last">
-                                        <a class="btn btn-outline-primary btn-page-header" href=https://arxiv.org/abs/2204.11893  target=_blank rel=noopener>
-                                            2204.11893
-                                        </a>
-                                        <a class="btn btn-outline-primary btn-page-header" href=https://arxiv.org/abs/2204.11279  target=_blank rel=noopener>
-                                            2204.11279
-                                        </a>
-                                         <a class="btn btn-outline-primary btn-page-header" href=https://arxiv.org/abs/2304.05427  target=_blank rel=noopener>
-                                             2304.05427
-                                          </a>                                                                              
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-4 order-first research-figures" align=center>
-                                    <div class=order-2>
-                                        <img src=assets/img/figEOS.png height=relative width=90% alt="EOS of QCD matter" loading=lazy>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>                   
-
-
-
-                </div>
-              </div>
-          </div>
       </div>
     </section>
     

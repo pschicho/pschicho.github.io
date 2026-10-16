@@ -5,7 +5,7 @@
 /* ── Bootstrap 5 settings ───────────────────────────────────────────────── */
 /* Bootstrap itself is loaded from cdnjs before this file. Wowchemy used to  */
 /* compile a customised Bootstrap 4 in here; these rules carry its settings */
-/* (brand colour, 30px gutters, 1290px container, navbar colours) over to   */
+/* (brand color, 30px gutters, 1290px container, navbar colors) over to   */
 /* Bootstrap 5 so the theme rules below render as before.                   */
 :root {
     --bs-primary: #1565c0;
@@ -792,7 +792,7 @@ figure figcaption.numbered {
     filter:invert(1)
 }
 
-/* invert lightness but keep hue (e.g. coloured logos) */
+/* invert lightness but keep hue (e.g. colored logos) */
 .dark .img-light.img-keep-hue {
     filter:invert(1) hue-rotate(180deg)
 }
@@ -3277,7 +3277,7 @@ html {
     border-color: rgba(255,255,255,.3);
 }
 
-/* `.dark .btn-primary` resets the text colour to black */
+/* `.dark .btn-primary` resets the text color to black */
 .dark .thesis-form .btn-primary {
     color: #fff;
 }
@@ -3343,7 +3343,7 @@ html {
     background: rgba(187, 222, 251, .07);
 }
 
-/* `.dark .btn-primary` resets the text colour to black */
+/* `.dark .btn-primary` resets the text color to black */
 .dark .thesis-callout .btn-primary {
     color: #fff;
 }
@@ -3378,7 +3378,7 @@ html {
     }
 }
 
-/* `.dark .btn-primary` resets the text colour to black */
+/* `.dark .btn-primary` resets the text color to black */
 .dark .bio-actions .btn-primary {
     color: #fff;
 }
@@ -3499,4 +3499,105 @@ html {
 
 .dark .key-figure-label {
     color: rgba(255, 255, 255, .6);
+}
+
+/* research section: filter tiles with the thumbnails of the ERC proposal */
+.research-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: .75rem;
+}
+
+.research-filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 8rem;
+    padding: .6rem .4rem .5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: .9rem;
+    font-weight: 600;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .15s, border-color .15s;
+}
+
+.research-filter:hover, .research-filter:focus-visible {
+    text-decoration: none;
+    background: rgba(21, 101, 192, .07);
+}
+
+.research-filter.active {
+    border-color: #1565c0;
+    background: rgba(21, 101, 192, .07);
+}
+
+.research-filter-thumb {
+    display: block;
+    width: 5.5rem;
+    aspect-ratio: 79.54 / 75.288;
+}
+
+.research-filter-thumb img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.research-filter-all {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+}
+
+.research-filter-label {
+    margin-top: .45rem;
+}
+
+.dark .research-filter:hover, .dark .research-filter:focus-visible {
+    background: rgba(187, 222, 251, .07);
+}
+
+.dark .research-filter.active {
+    border-color: #90caf9;
+    background: rgba(187, 222, 251, .07);
+}
+
+@media (max-width: 575.98px) {
+    .research-filters {
+        gap: .5rem;
+    }
+
+    .research-filter {
+        width: calc((100% - 1rem) / 3);
+        font-size: .8rem;
+    }
+
+    .research-filter-thumb {
+        width: 4.25rem;
+    }
+}
+
+/* CV section: summary and pdf link next to the experience timeline */
+.cv-intro {
+    width: 100%;
+}
+
+.section-heading .cv-intro p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: inherit;
+}
+
+.dark .section-heading .cv-intro p {
+    color: inherit;
+}
+
+/* `.dark .btn-primary` resets the text color to black */
+.dark .cv-intro .btn-primary {
+    color: #fff;
 }
