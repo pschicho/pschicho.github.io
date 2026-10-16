@@ -792,6 +792,11 @@ figure figcaption.numbered {
     filter:invert(1)
 }
 
+/* invert lightness but keep hue (e.g. coloured logos) */
+.dark .img-light.img-keep-hue {
+    filter:invert(1) hue-rotate(180deg)
+}
+
 svg {
     fill:currentColor
 }
