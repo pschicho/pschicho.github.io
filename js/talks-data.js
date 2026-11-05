@@ -18,6 +18,16 @@ window.TALKS = [
     "category": "Seminar"
   },
   {
+    "title": "Precision thermal field theory for the early universe",
+    "description": "",
+    "date": "2026-11-05",
+    "type": "talk",
+    "event": "the PT@Geneva meeting",
+    "location": "CERN, Geneva, Switzerland",
+    "category": "Seminar",
+    "slidesUrl": "/assets/talks/cern26.pdf"
+  },
+  {
     "title": "Fun with higher orders and operators",
     "description": "",
     "date": "2026-10-15",
