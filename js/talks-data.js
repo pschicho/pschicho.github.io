@@ -25,7 +25,6 @@ window.TALKS = [
     "event": "the PT@Geneva meeting",
     "location": "CERN, Geneva, Switzerland",
     "category": "Seminar",
-    "slidesUrl": "/assets/talks/cern26.pdf"
   },
   {
     "title": "Fun with higher orders and operators",
