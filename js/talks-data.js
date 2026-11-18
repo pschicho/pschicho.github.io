@@ -49,7 +49,7 @@ window.TALKS = [
     "description": "",
     "date": "2026-09-21",
     "type": "invited seminar talk",
-    "location": "University Melbourne, Australia",
+    "location": "University of Melbourne, Australia",
     "category": "Seminar"
   },
   {
